@@ -1,0 +1,7 @@
+$ ./part2.py --debug input.txt
+2024-12-01 00:49:43,698 INFO   : Starting ./part2.py to read input.txt...
+2024-12-01 00:49:43,699 INFO   : Found 1000 lines in input file
+2024-12-01 00:49:43,699 DEBUG  : Building counter list...
+2024-12-01 00:49:43,699 INFO   : Total similarity score = 25574739
+2024-12-01 00:49:43,699 INFO   : Completed successfully
+$
