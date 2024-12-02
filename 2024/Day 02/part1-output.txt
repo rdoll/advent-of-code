@@ -1,0 +1,5 @@
+$ ./part1.py input.txt
+2024-12-01 23:46:48,415 INFO   : Starting ./part1.py to read input.txt...
+2024-12-01 23:46:48,420 INFO   : Found 598 reports out of 1000 total reports
+2024-12-01 23:46:48,420 INFO   : Completed successfully
+$

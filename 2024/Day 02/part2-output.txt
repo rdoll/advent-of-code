@@ -1,0 +1,86 @@
+$ ./part2.py --help
+usage: part2.py [-h] [-d] [-m #] input-file
+
+Advent of Code 2024 Day 02 Solution
+
+positional arguments:
+  input-file           input file
+
+optional arguments:
+  -h, --help           show this help message and exit
+  -d, --debug          show debug logs (default: False)
+  -m #, --max-lines #  constrain input to this many lines, 0 = disabled (default: 0)
+$ ./part2.py input.txt
+2024-12-02 00:38:23,116 INFO   : Starting ./part2.py to read input.txt...
+2024-12-02 00:38:23,125 INFO   : Found 634 reports out of 1000 total reports
+2024-12-02 00:38:23,125 INFO   : Completed successfully
+$ ./part2.py --debug --max-lines 10 input.txt
+2024-12-02 00:46:17,778 INFO   : Starting ./part2.py to read input.txt...
+2024-12-02 00:46:17,779 DEBUG  : vals=[10, 13, 14, 12] unsafe with 8 removed
+2024-12-02 00:46:17,779 DEBUG  : vals=[8, 13, 14, 12] unsafe with 10 removed
+2024-12-02 00:46:17,779 DEBUG  : vals=[8, 10, 14, 12] unsafe with 13 removed
+2024-12-02 00:46:17,779 DEBUG  : vals=[8, 10, 13, 12] unsafe with 14 removed
+2024-12-02 00:46:17,780 DEBUG  : vals=[8, 10, 13, 14] safe with 12 removed
+2024-12-02 00:46:17,780 DEBUG  : vals=[42, 45, 47, 49, 49] unsafe with 40 removed
+2024-12-02 00:46:17,780 DEBUG  : vals=[40, 45, 47, 49, 49] unsafe with 42 removed
+2024-12-02 00:46:17,780 DEBUG  : vals=[40, 42, 47, 49, 49] unsafe with 45 removed
+2024-12-02 00:46:17,780 DEBUG  : vals=[40, 42, 45, 49, 49] unsafe with 47 removed
+2024-12-02 00:46:17,780 DEBUG  : vals=[40, 42, 45, 47, 49] safe with 49 removed
+2024-12-02 00:46:17,781 DEBUG  : vals=[48, 51, 52, 55, 58, 62] unsafe with 45 removed
+2024-12-02 00:46:17,781 DEBUG  : vals=[45, 51, 52, 55, 58, 62] unsafe with 48 removed
+2024-12-02 00:46:17,781 DEBUG  : vals=[45, 48, 52, 55, 58, 62] unsafe with 51 removed
+2024-12-02 00:46:17,781 DEBUG  : vals=[45, 48, 51, 55, 58, 62] unsafe with 52 removed
+2024-12-02 00:46:17,781 DEBUG  : vals=[45, 48, 51, 52, 58, 62] unsafe with 55 removed
+2024-12-02 00:46:17,781 DEBUG  : vals=[45, 48, 51, 52, 55, 62] unsafe with 58 removed
+2024-12-02 00:46:17,782 DEBUG  : vals=[45, 48, 51, 52, 55, 58] safe with 62 removed
+2024-12-02 00:46:17,782 DEBUG  : vals=[63, 64, 67, 69, 72, 74, 81] unsafe with 61 removed
+2024-12-02 00:46:17,782 DEBUG  : vals=[61, 64, 67, 69, 72, 74, 81] unsafe with 63 removed
+2024-12-02 00:46:17,782 DEBUG  : vals=[61, 63, 67, 69, 72, 74, 81] unsafe with 64 removed
+2024-12-02 00:46:17,782 DEBUG  : vals=[61, 63, 64, 69, 72, 74, 81] unsafe with 67 removed
+2024-12-02 00:46:17,782 DEBUG  : vals=[61, 63, 64, 67, 72, 74, 81] unsafe with 69 removed
+2024-12-02 00:46:17,782 DEBUG  : vals=[61, 63, 64, 67, 69, 74, 81] unsafe with 72 removed
+2024-12-02 00:46:17,782 DEBUG  : vals=[61, 63, 64, 67, 69, 72, 81] unsafe with 74 removed
+2024-12-02 00:46:17,782 DEBUG  : vals=[61, 63, 64, 67, 69, 72, 74] safe with 81 removed
+2024-12-02 00:46:17,783 DEBUG  : vals=[97, 98, 99, 98, 99] unsafe with 95 removed
+2024-12-02 00:46:17,783 DEBUG  : vals=[95, 98, 99, 98, 99] unsafe with 97 removed
+2024-12-02 00:46:17,783 DEBUG  : vals=[95, 97, 99, 98, 99] unsafe with 98 removed
+2024-12-02 00:46:17,783 DEBUG  : vals=[95, 97, 98, 98, 99] unsafe with 99 removed
+2024-12-02 00:46:17,783 DEBUG  : vals=[95, 97, 98, 99, 99] unsafe with 98 removed
+2024-12-02 00:46:17,783 DEBUG  : vals=[95, 97, 98, 99, 98] unsafe with 99 removed
+2024-12-02 00:46:17,783 DEBUG  : *** vals=[95, 97, 98, 99, 98, 99] unsafe ***
+2024-12-02 00:46:17,783 DEBUG  : vals=[85, 88, 89, 88, 85] unsafe with 84 removed
+2024-12-02 00:46:17,783 DEBUG  : vals=[84, 88, 89, 88, 85] unsafe with 85 removed
+2024-12-02 00:46:17,784 DEBUG  : vals=[84, 85, 89, 88, 85] unsafe with 88 removed
+2024-12-02 00:46:17,784 DEBUG  : vals=[84, 85, 88, 88, 85] unsafe with 89 removed
+2024-12-02 00:46:17,784 DEBUG  : vals=[84, 85, 88, 89, 85] unsafe with 88 removed
+2024-12-02 00:46:17,784 DEBUG  : vals=[84, 85, 88, 89, 88] unsafe with 85 removed
+2024-12-02 00:46:17,784 DEBUG  : *** vals=[84, 85, 88, 89, 88, 85] unsafe ***
+2024-12-02 00:46:17,784 DEBUG  : vals=[23, 21, 24, 25, 28, 31, 31] unsafe with 20 removed
+2024-12-02 00:46:17,784 DEBUG  : vals=[20, 21, 24, 25, 28, 31, 31] unsafe with 23 removed
+2024-12-02 00:46:17,784 DEBUG  : vals=[20, 23, 24, 25, 28, 31, 31] unsafe with 21 removed
+2024-12-02 00:46:17,784 DEBUG  : vals=[20, 23, 21, 25, 28, 31, 31] unsafe with 24 removed
+2024-12-02 00:46:17,785 DEBUG  : vals=[20, 23, 21, 24, 28, 31, 31] unsafe with 25 removed
+2024-12-02 00:46:17,785 DEBUG  : vals=[20, 23, 21, 24, 25, 31, 31] unsafe with 28 removed
+2024-12-02 00:46:17,785 DEBUG  : vals=[20, 23, 21, 24, 25, 28, 31] unsafe with 31 removed
+2024-12-02 00:46:17,785 DEBUG  : vals=[20, 23, 21, 24, 25, 28, 31] unsafe with 31 removed
+2024-12-02 00:46:17,785 DEBUG  : *** vals=[20, 23, 21, 24, 25, 28, 31, 31] unsafe ***
+2024-12-02 00:46:17,785 DEBUG  : vals=[16, 18, 17, 18, 22] unsafe with 15 removed
+2024-12-02 00:46:17,785 DEBUG  : vals=[15, 18, 17, 18, 22] unsafe with 16 removed
+2024-12-02 00:46:17,785 DEBUG  : vals=[15, 16, 17, 18, 22] unsafe with 18 removed
+2024-12-02 00:46:17,785 DEBUG  : vals=[15, 16, 18, 18, 22] unsafe with 17 removed
+2024-12-02 00:46:17,786 DEBUG  : vals=[15, 16, 18, 17, 22] unsafe with 18 removed
+2024-12-02 00:46:17,786 DEBUG  : vals=[15, 16, 18, 17, 18] unsafe with 22 removed
+2024-12-02 00:46:17,786 DEBUG  : *** vals=[15, 16, 18, 17, 18, 22] unsafe ***
+2024-12-02 00:46:17,786 DEBUG  : vals=[32, 30, 32, 34, 39] unsafe with 31 removed
+2024-12-02 00:46:17,786 DEBUG  : vals=[31, 30, 32, 34, 39] unsafe with 32 removed
+2024-12-02 00:46:17,786 DEBUG  : vals=[31, 32, 32, 34, 39] unsafe with 30 removed
+2024-12-02 00:46:17,786 DEBUG  : vals=[31, 32, 30, 34, 39] unsafe with 32 removed
+2024-12-02 00:46:17,786 DEBUG  : vals=[31, 32, 30, 32, 39] unsafe with 34 removed
+2024-12-02 00:46:17,786 DEBUG  : vals=[31, 32, 30, 32, 34] unsafe with 39 removed
+2024-12-02 00:46:17,787 DEBUG  : *** vals=[31, 32, 30, 32, 34, 39] unsafe ***
+2024-12-02 00:46:17,787 DEBUG  : vals=[74, 74, 77, 78] unsafe with 72 removed
+2024-12-02 00:46:17,787 DEBUG  : vals=[72, 74, 77, 78] safe with 74 removed
+2024-12-02 00:46:17,787 WARNING: Halting after 10 of input per max lines 10
+2024-12-02 00:46:17,787 INFO   : Found 5 reports out of 10 total reports
+2024-12-02 00:46:17,787 INFO   : Completed successfully
+$
