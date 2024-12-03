@@ -1,0 +1,10 @@
+$ ./part2.py --debug input.txt
+2024-12-02 23:34:31,523 INFO   : Starting ./part2.py to read input.txt...
+2024-12-02 23:34:31,523 DEBUG  : Found 121 instructions in line 1, current total 14183448
+2024-12-02 23:34:31,524 DEBUG  : Found 122 instructions in line 2, current total 29351207
+2024-12-02 23:34:31,524 DEBUG  : Found 127 instructions in line 3, current total 34008422
+2024-12-02 23:34:31,524 DEBUG  : Found 122 instructions in line 4, current total 37892266
+2024-12-02 23:34:31,524 DEBUG  : Found 123 instructions in line 5, current total 53421638
+2024-12-02 23:34:31,524 DEBUG  : Found 119 instructions in line 6, current total 77055967
+2024-12-02 23:34:31,524 INFO   : 734 instructions found in 6 of computer memory totalling 77055967
+2024-12-02 23:34:31,524 INFO   : Completed successfully

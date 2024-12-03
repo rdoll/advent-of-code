@@ -1,0 +1,11 @@
+$ ./part1.py --debug input.txt
+2024-12-02 23:24:25,287 INFO   : Starting ./part1.py to read input.txt...
+2024-12-02 23:24:25,287 DEBUG  : Found 112 muls in line 1, current total 24286181
+2024-12-02 23:24:25,288 DEBUG  : Found 112 muls in line 2, current total 50828211
+2024-12-02 23:24:25,288 DEBUG  : Found 112 muls in line 3, current total 74820688
+2024-12-02 23:24:25,288 DEBUG  : Found 112 muls in line 4, current total 100586032
+2024-12-02 23:24:25,288 DEBUG  : Found 112 muls in line 5, current total 126932720
+2024-12-02 23:24:25,288 DEBUG  : Found 112 muls in line 6, current total 153469856
+2024-12-02 23:24:25,288 INFO   : 672 mul's found in 6 lines of computer memory totalling 153469856
+2024-12-02 23:24:25,288 INFO   : Completed successfully
+$
