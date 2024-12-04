@@ -1,0 +1,5 @@
+$ part1.py input.txt
+2024-12-03 23:45:26,136 INFO   : Starting ./part1.py to read input.txt...
+2024-12-03 23:45:26,162 INFO   : Found 2644 words in the 140 x 140 grid
+2024-12-03 23:45:26,162 INFO   : Completed successfully
+$

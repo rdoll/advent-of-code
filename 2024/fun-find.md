@@ -1,4 +1,6 @@
-Fun find: if you open the web inspector, you'll find this comment:
+# Fun Find
+
+If you open the web inspector to look at the HTML source, you'll find this comment:
 
 ```html
 <!--
