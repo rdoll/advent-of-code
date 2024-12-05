@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 #
-# Advent of Code 2024 Day 04 Part One
+# Advent of Code 2024 Day 04 Part Two
 #
 
 import argparse
