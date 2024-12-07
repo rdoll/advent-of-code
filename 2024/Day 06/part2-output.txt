@@ -1,0 +1,12 @@
+$ ./part2.py input.txt
+...
+2024-12-06 22:40:31,312 INFO   : No loop with extra obstacle at (68, 118)
+2024-12-06 22:40:31,319 INFO   : Guard exited grid moving > at (72, 129)
+...
+2024-12-06 22:46:33,503 INFO   : Guard exited grid moving > at (72, 129)
+2024-12-06 22:46:33,505 INFO   : No loop with extra obstacle at (129, 127)
+2024-12-06 22:46:33,512 INFO   : Guard exited grid moving > at (72, 129)
+2024-12-06 22:46:33,514 INFO   : No loop with extra obstacle at (129, 129)
+2024-12-06 22:46:33,514 INFO   : Placing 1705 single obstacles can create a loop
+2024-12-06 22:46:33,514 INFO   : Completed successfully
+$

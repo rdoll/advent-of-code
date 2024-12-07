@@ -11,4 +11,5 @@ Home: https://adventofcode.com
 * [Day 3](2024/Day%2003/README.md) both parts solved
 * [Day 4](2024/Day%2004/README.md) both parts solved
 * [Day 5](2024/Day%2005/README.md) both parts solved
-* [Day 6](2024/Day%2006/README.md) part 1 solved
+* [Day 6](2024/Day%2006/README.md) both parts solved
+* [Day 7](2024/Day%2007/README.md) both parts solved

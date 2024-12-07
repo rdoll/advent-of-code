@@ -93,4 +93,4 @@ https://adventofcode.com/2024/day/6#part2
 
 * My input was [input.txt](input.txt)
 * I wrote [part2.py](part2.pyz)
-* ~~My [part2-output.txt](part2-output.txt) was correct~~
+* My [part2-output.txt](part2-output.txt) was correct

@@ -5,6 +5,7 @@
 #
 
 import argparse
+import copy
 import logging
 import sys
 
@@ -14,8 +15,6 @@ def parse_args() -> argparse.Namespace:
                                      description='Advent of Code 2024 Day 06 Solution')
 
     parser.add_argument('-d', '--debug', action='store_true', help='show debug logs')
-    parser.add_argument('-m', '--max-lines', metavar='#', type=int, default=0,
-                        help='constrain input to this many lines, 0 = disabled')
     parser.add_argument('input_file', metavar="input-file", nargs=1, type=argparse.FileType('r'),
                         help='input file')
 
@@ -23,85 +22,109 @@ def parse_args() -> argparse.Namespace:
     return args
 
 
-EMPTY: str = "."
-OBSTACLE: str = "#"
-GUARD_UP: str = "^"
-GUARD_RIGHT: str = ">"
-GUARD_DOWN: str = "v"
-GUARD_LEFT: str = "<"
-GUARDS: list[str] = [GUARD_UP,  GUARD_RIGHT, GUARD_DOWN, GUARD_LEFT]
-VISITED: str = "X"
-NEW_BLOCK: str = "O"
+class World:
+    EMPTY: str = "."
+    OBSTACLE: str = "#"
+    GUARD_UP: str = "^"
+    GUARD_RIGHT: str = ">"
+    GUARD_DOWN: str = "v"
+    GUARD_LEFT: str = "<"
+    GUARDS: list[str] = [GUARD_UP,  GUARD_RIGHT, GUARD_DOWN, GUARD_LEFT]
+    VISITED: str = "X"
+    NEW_BLOCK: str = "O"
+
+    GUARD_PATH = {
+        GUARD_UP:    {'offset': (-1,  0), 'next_guard': GUARD_RIGHT, 'loop_check_offset': ( 0,  1)},
+        GUARD_RIGHT: {'offset': ( 0,  1), 'next_guard': GUARD_DOWN,  'loop_check_offset': ( 1,  0)},
+        GUARD_DOWN:  {'offset': ( 1,  0), 'next_guard': GUARD_LEFT,  'loop_check_offset': ( 0, -1)},
+        GUARD_LEFT:  {'offset': ( 0, -1), 'next_guard': GUARD_UP,    'loop_check_offset': (-1,  0)}
+    }
 
 
-def debug_log_grid(grid: list[list[str]]):
-    for row in range(0, len(grid[0])):
-        logging.debug(f'  {"".join(grid[row])}')
-    logging.debug("")
+    def __init__(self, grid: list[list[str]]):
+        self.grid = grid
+        self.rows = len(grid)
+        self.columns = len(grid[0])
+        self.guard_pos = self.find_guard()
+        self.guard = self.grid[self.guard_pos[0]][self.guard_pos[1]]
 
 
-def find_guard(grid: list[list[str]]) -> tuple[int, int] | None:
-    for r in range(0, len(grid)):
-        for c in range(0, len(grid[r])):
-            if grid[r][c] in GUARDS:
-                logging.debug(f'Guard found at {(r, c)}')
-                return r, c
-    return None
+    def debug_log_grid(self):
+        for row in range(0, self.rows):
+            logging.debug(f'  {"".join(self.grid[row])}')
+        logging.debug("")
 
 
-def move_guard(grid: list[list[str]], guard_pos: tuple[int, int]) -> tuple[bool, tuple[int, int] | None, str | None]:
-    rows = len(grid)
-    columns = len(grid[0])
-
-    guard = grid[guard_pos[0]][guard_pos[1]]
-    if guard == GUARD_UP:
-        offset = [-1, 0]
-        next_guard = GUARD_RIGHT
-    elif guard == GUARD_RIGHT:
-        offset = [0, 1]
-        next_guard = GUARD_DOWN
-    elif guard == GUARD_DOWN:
-        offset = [1, 0]
-        next_guard = GUARD_LEFT
-    elif guard == GUARD_LEFT:
-        offset = [0, -1]
-        next_guard = GUARD_UP
-    else:
-        raise RuntimeError(f'Unexpected guard char {guard} at {guard_pos}')
-
-    for failsafe in range(0, max(rows, columns) + 1):
-        grid[guard_pos[0]][guard_pos[1]] = VISITED
-
-        next_pos = (guard_pos[0] + offset[0], guard_pos[1] + offset[1])
-        if next_pos[0] not in range(0, rows) or next_pos[1] not in range(0, columns):
-            logging.info(f'Guard left grid moving {guard} at {guard_pos}')
-            debug_log_grid(grid)
-            return True, guard_pos, guard
-
-        next = grid[next_pos[0]][next_pos[1]]
-        if next == OBSTACLE:
-            grid[guard_pos[0]][guard_pos[1]] = next_guard
-            logging.debug(f'Guard moved {guard} to {guard_pos}')
-            return False, guard_pos, guard
-        elif next == EMPTY or next == VISITED:
-            guard_pos = next_pos
-            grid[guard_pos[0]][guard_pos[1]] = guard
-        else:
-            raise RuntimeError(f'Unexpected grid character {next} at {next_pos}')
-
-    raise RuntimeError("Exceeded failsafe for guard!")
+    def find_guard(self) -> tuple[int, int] | None:
+        for r in range(0, len(self.grid)):
+            for c in range(0, len(self.grid[r])):
+                if self.grid[r][c] in self.GUARDS:
+                    logging.debug(f'Guard found at {(r, c)}')
+                    return r, c
+        return None
 
 
-def main() -> int:
-    args = parse_args()
-    logging.basicConfig(format='%(asctime)s %(levelname)-7s: %(message)s',
-                        level=logging.DEBUG if args.debug else logging.INFO)
-    logging.info(f'Starting {sys.argv[0]} to read {args.input_file[0].name}...')
+    def is_in_grid(self, pos: tuple[int, int]):
+        return pos[0] in range(0, self.rows) and pos[1] in range(0, self.columns)
 
+
+    def move_forward(self) -> bool:
+        self.guard = self.grid[self.guard_pos[0]][self.guard_pos[1]]
+        [offset, next_guard, loop_check_offset] = self.GUARD_PATH[self.guard].values()
+
+        for failsafe in range(0, max(self.rows, self.columns) + 1):
+            self.grid[self.guard_pos[0]][self.guard_pos[1]] = self.VISITED
+
+            next_pos = (self.guard_pos[0] + offset[0], self.guard_pos[1] + offset[1])
+            if not self.is_in_grid(next_pos):
+                logging.info(f'Guard exited grid moving {self.guard} at {self.guard_pos}')
+                #self.debug_log_grid()
+                return True
+
+            next = self.grid[next_pos[0]][next_pos[1]]
+            if next == self.OBSTACLE:
+                # guard stops before obstacle and turns
+                self.grid[self.guard_pos[0]][self.guard_pos[1]] = next_guard
+                self.guard = next_guard
+                logging.debug(f'Guard {self.guard} moved to {self.guard_pos}')
+                return False
+            elif next == self.EMPTY or next == self.VISITED or next == self.NEW_BLOCK:
+                # guard moves into position
+                self.guard_pos = next_pos
+                self.grid[self.guard_pos[0]][self.guard_pos[1]] = self.guard
+            else:
+                raise RuntimeError(f'Unexpected grid character {next} at {next_pos}')
+
+        raise RuntimeError(f'Failsafe hit while moving guard {self}')
+
+
+    def move_full_path(self):
+        failsafe = self.rows * self.columns
+        while failsafe > 0:
+            finished = self.move_forward()
+            if finished:
+                break
+            #self.debug_log_grid()
+
+            failsafe -= 1
+            if failsafe <= 0:
+                raise OverflowError(f'Guard trips exceeded failsafe -- presume this is a loop!')
+
+        assert self.find_guard() is None, f'Guard is still in grid!'
+
+        visited: int = 0
+        for row in self.grid:
+            for col in row:
+                if col == self.VISITED:
+                    visited += 1
+        logging.debug(f'Guard visited {visited} positions')
+
+
+def load_grid(input_file) -> list[list[str]]:
     rows: int = 0
     columns: int = 0
     grid: list[list[str]] = []
-    for line in args.input_file[0]:
+    for line in input_file:
         line = line.strip()
         if not line:
             continue
@@ -110,87 +133,36 @@ def main() -> int:
         row = list(line)
         if columns > 0:
             if len(row) != columns:
-                logging.error(f'In row {rows}, number of columns changed from {columns} to {len(row)}')
-                return 1
+                raise RuntimeError(f'In row {rows}, number of columns changed from {columns} to {len(row)}')
         else:
             columns = len(row)
         grid.append(row)
 
-        if args.max_lines > 0 and rows >= args.max_lines:
-            logging.warning(f'Halting after {rows} of input per max lines {args.max_lines}')
-            break
     logging.debug(f'Read {rows} x {columns} grid')
-    debug_log_grid(grid)
+    return grid
 
-    guard_pos = find_guard(grid)
-    assert guard_pos, f'Guard not found in grid!'
-    start_pos = guard_pos
-    start_dir = grid[start_pos[0]][start_pos[1]]
-    past_pos: list[tuple[int, int]] = []
-    new_blocks: set[tuple[int, int]] = set()
-    failsafe = rows * columns
-    while True:
-        [finished, guard_pos, last_dir] = move_guard(grid, guard_pos)
 
-        # Check past positions
-        new_pos: tuple[int, int] | None = None
-        if len(past_pos) >= 3:
-            loop_pos: tuple[int, int] = past_pos.pop(0)
-            if last_dir == GUARD_UP and guard_pos[0] < loop_pos[0]:
-                new_pos = (loop_pos[0] - 1, guard_pos[1])
-            elif last_dir == GUARD_RIGHT and guard_pos[1] > loop_pos[1]:
-                new_pos = (guard_pos[0], loop_pos[1] + 1)
-            if last_dir == GUARD_DOWN and guard_pos[0] > loop_pos[0]:
-                new_pos = (loop_pos[0] + 1, guard_pos[1])
-            elif last_dir == GUARD_LEFT and guard_pos[1] < loop_pos[1]:
-                new_pos = (guard_pos[0], loop_pos[1] - 1)
-            if new_pos:
-                assert grid[new_pos[0]][new_pos[1]] != OBSTACLE, \
-                    f'Obstacle at path loop spot {guard_pos}, {loop_pos}, {last_dir}'
-                logging.info(f'New block at {new_pos} would cause a path loop')
-                debug_log_grid(grid)
-                new_blocks.add(new_pos)
-                new_pos = None
+def main() -> int:
+    args = parse_args()
+    logging.basicConfig(format='%(asctime)s %(levelname)-7s: %(message)s',
+                        level=logging.DEBUG if args.debug else logging.INFO)
+    logging.info(f'Starting {sys.argv[0]} to read {args.input_file[0].name}...')
 
-        # Check would go back through start in the same direction and not hit an obstacle before reaching the start
-        # Cheating -- my input has the guard starting up
-        # if last_dir == GUARD_UP and start_dir == GUARD_RIGHT and guard_pos[0] < start_pos[0]:
-        #     new_pos = (start_pos[0] - 1, guard_pos[1])
-        # elif last_dir == GUARD_RIGHT and start_dir == GUARD_DOWN and guard_pos[1] > start_pos[1]:
-        #     new_pos = (guard_pos[0], start_pos[1] + 1)
-        # elif last_dir == GUARD_DOWN and start_dir == GUARD_LEFT and guard_pos[0] > start_pos[0]:
-        #     new_pos = (start_pos[0] + 1, guard_pos[1])
-        if last_dir == GUARD_LEFT and start_dir == GUARD_UP and guard_pos[1] < start_pos[1]:
-            would_hit_obstacle = False
-            for row in range(start_pos[0], guard_pos[0]):
-                if grid[row][start_pos[1]] == OBSTACLE:
-                    would_hit_obstacle = True
-                    break
-            if not would_hit_obstacle:
-                new_pos = (guard_pos[0], start_pos[1] - 1)
-        if new_pos:
-            assert grid[new_pos[0]][new_pos[1]] != OBSTACLE, \
-                f'Obstacle at start loop spot {guard_pos}, {last_dir}, {start_pos}, {start_dir}'
-            logging.info(f'New block at {new_pos} would cause a start loop')
-            debug_log_grid(grid)
-            new_blocks.add(new_pos)
-
-        past_pos.append(guard_pos)
-
-        if finished:
-            break
-
-        failsafe -= 1
-        if failsafe <= 0:
-            raise RuntimeError(f'Guard trips exceeded failsafe!')
-
-    assert find_guard(grid) is None, f'Guard is still in grid!'
-    logging.info(f'Guard would be looped by {len(new_blocks)} blocks')
-
-    if args.debug:
-        for new_block in new_blocks:
-            grid[new_block[0]][new_block[1]] = NEW_BLOCK
-        debug_log_grid(grid)
+    grid = load_grid(args.input_file[0])
+    loops: int = 0
+    for r in range(0, len(grid)):
+        for c in range(0, len(grid[r])):
+            if grid[r][c] == World.EMPTY:
+                # if an obstacle was placed here, would guard still path to exit or loop?
+                world = World(copy.deepcopy(grid))
+                world.grid[r][c] = World.OBSTACLE
+                try:
+                    world.move_full_path()
+                    logging.info(f'No loop with extra obstacle at {(r, c)}')
+                except OverflowError as e:
+                    logging.info(f'Loop detected with extra obstacle at {(r, c)}')
+                    loops += 1
+    logging.info(f'Placing {loops} single obstacles can create a loop')
 
     logging.info('Completed successfully')
     return 0

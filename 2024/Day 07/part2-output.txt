@@ -1,0 +1,9 @@
+$ ./part2.py input.txt
+2024-12-07 00:05:33,619 INFO   : Starting ./part2.py to read input.txt...
+2024-12-07 00:05:33,619 INFO   : Calibration total=1233, operands=[1, 18, 5, 3] can be valid
+2024-12-07 00:05:33,625 INFO   : Calibration total=109101993, operands=[3, 8, 2, 471, 2, 5, 5, 2, 1, 1, 517] can be valid
+...
+2024-12-07 00:05:37,488 INFO   : Calibration total=939849096, operands=[6, 736, 9, 8, 7, 49, 6, 9, 79, 8] can be valid
+2024-12-07 00:05:37,515 INFO   : Found 544 in 850 input lines that totalled 945341732469724
+2024-12-07 00:05:37,515 INFO   : Completed successfully
+$
