@@ -6,7 +6,7 @@ See [README.md](README.md)
 
 ## Part Two
 
-https://adventofcode.com/2024/day/6#part2
+https://adventofcode.com/2024/day/7#part2
 
 <article class="day-desc"><h2>--- Day 7: Bridge Repair ---</h2><p>The Historians take you to a familiar <a href="/2022/day/9">rope bridge</a> over a river in the middle of a jungle. The Chief isn't on this side of the bridge, though; maybe he's on the other side?</p>
 <p>When you go to cross the bridge, you notice a group of engineers trying to repair it. (Apparently, it breaks pretty frequently.) You won't be able to cross until it's fixed.</p>
