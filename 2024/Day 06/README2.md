@@ -92,5 +92,5 @@ https://adventofcode.com/2024/day/6#part2
 ### My Solution
 
 * My input was [input.txt](input.txt)
-* I wrote [part2.py](part2.pyz)
+* I wrote [part2.py](part2.py)
 * My [part2-output.txt](part2-output.txt) was correct
