@@ -1,0 +1,10 @@
+$ ./part1.py --debug input.txt
+2024-12-09 00:53:51,167 INFO   : Starting ./part1.py to read input.txt...
+2024-12-09 00:53:51,178 DEBUG  : Drive next_file_id=10000, num blocks=95070
+2024-12-09 00:53:51,178 INFO   :     0000000.........11111.22222222......333333333.........44444.5555555666666666.777....888888888..99..aaaaaaaa..bbbb.....cc...
+..dddd......eeeeeeee......ffffffff........ggggg........hhhhhhh..iiiiiiiijjjjj
+2024-12-09 00:56:01,099 INFO   :     0000000!!!!!!!!!11111!22222222!!!!!!333333333!!!!!!!!!44444!5555555666666666!777!!!!888888888!!99!!aaaaaaaa!!bbbb!!!!!cc!!!
+!!dddd!!!!!!eeeeeeee!!!!!!ffffffff!!!!!!!!ggggg!!!!!!!!hhhhhhh!!iiiiiiiijjjjj
+2024-12-09 00:56:01,105 INFO   : Compacted drive has checksum 6353658451014
+2024-12-09 00:56:01,105 INFO   : Completed successfully
+$
