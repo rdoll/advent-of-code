@@ -1,0 +1,22 @@
+$ ./part2redux.py --debug --blinks 75 input.txt
+2024-12-11 03:27:52,039 INFO   : Starting ./part2redux.py to read input.txt...
+2024-12-11 03:27:52,039 INFO   : Stones = [8435, 234, 928434, 14, 0, 7, 92446, 8992692]
+2024-12-11 03:27:52,039 INFO   : Starting stone 8435
+2024-12-11 03:27:52,042 INFO   : Stone 8435 generated 53601988279593 stones, total now 53601988279593
+2024-12-11 03:27:52,042 INFO   : Starting stone 234
+2024-12-11 03:27:52,083 INFO   : Stone 234 generated 16335012191103 stones, total now 69937000470696
+2024-12-11 03:27:52,083 INFO   : Starting stone 928434
+2024-12-11 03:27:52,100 INFO   : Stone 928434 generated 28529091417195 stones, total now 98466091887891
+2024-12-11 03:27:52,100 INFO   : Starting stone 14
+2024-12-11 03:27:52,100 INFO   : Stone 14 generated 44290886796369 stones, total now 142756978684260
+2024-12-11 03:27:52,100 INFO   : Starting stone 0
+2024-12-11 03:27:52,101 INFO   : Stone 0 generated 22938365706844 stones, total now 165695344391104
+2024-12-11 03:27:52,101 INFO   : Starting stone 7
+2024-12-11 03:27:52,101 INFO   : Stone 7 generated 30121450842288 stones, total now 195816795233392
+2024-12-11 03:27:52,101 INFO   : Starting stone 92446
+2024-12-11 03:27:52,129 INFO   : Stone 92446 generated 12759399013731 stones, total now 208576194247123
+2024-12-11 03:27:52,130 INFO   : Starting stone 8992692
+2024-12-11 03:27:52,143 INFO   : Stone 8992692 generated 7742714374514 stones, total now 216318908621637
+2024-12-11 03:27:52,143 INFO   : Final total for 8 is 216318908621637
+2024-12-11 03:27:52,144 INFO   : Completed successfully
+$
