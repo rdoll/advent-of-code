@@ -1,0 +1,801 @@
+$ ./part1.py --debug input.txt
+2024-12-13 00:10:50,351 INFO   : Starting ./part1.py to read input.txt...
+2024-12-13 00:10:50,356 DEBUG  : Loaded claw machine: button A = 62 x 54, button B = 19 x 93, prize = 4094 x 11058
+2024-12-13 00:10:50,356 DEBUG  : Loaded claw machine: button A = 55 x 93, button B = 83 x 27, prize = 9995 x 7833
+2024-12-13 00:10:50,357 DEBUG  : Loaded claw machine: button A = 83 x 31, button B = 21 x 34, prize = 8042 x 4233
+2024-12-13 00:10:50,357 DEBUG  : Loaded claw machine: button A = 21 x 11, button B = 11 x 23, prize = 13963 x 17749
+2024-12-13 00:10:50,357 DEBUG  : Loaded claw machine: button A = 65 x 97, button B = 83 x 12, prize = 6919 x 3278
+2024-12-13 00:10:50,357 DEBUG  : Loaded claw machine: button A = 28 x 17, button B = 16 x 43, prize = 19828 x 14869
+2024-12-13 00:10:50,357 DEBUG  : Loaded claw machine: button A = 26 x 12, button B = 40 x 59, prize = 19660 x 1040
+2024-12-13 00:10:50,357 DEBUG  : Loaded claw machine: button A = 17 x 80, button B = 77 x 16, prize = 11125 x 19344
+2024-12-13 00:10:50,357 DEBUG  : Loaded claw machine: button A = 41 x 77, button B = 97 x 15, prize = 6430 x 4386
+2024-12-13 00:10:50,357 DEBUG  : Loaded claw machine: button A = 18 x 58, button B = 68 x 24, prize = 3136 x 3276
+2024-12-13 00:10:50,357 DEBUG  : Loaded claw machine: button A = 40 x 39, button B = 21 x 98, prize = 2893 x 8480
+2024-12-13 00:10:50,357 DEBUG  : Loaded claw machine: button A = 57 x 11, button B = 42 x 99, prize = 7356 x 6237
+2024-12-13 00:10:50,357 DEBUG  : Loaded claw machine: button A = 21 x 61, button B = 72 x 24, prize = 7049 x 5889
+2024-12-13 00:10:50,357 DEBUG  : Loaded claw machine: button A = 55 x 21, button B = 20 x 37, prize = 17600 x 18892
+2024-12-13 00:10:50,357 DEBUG  : Loaded claw machine: button A = 39 x 79, button B = 51 x 14, prize = 11165 x 15493
+2024-12-13 00:10:50,357 DEBUG  : Loaded claw machine: button A = 59 x 97, button B = 35 x 19, prize = 1331 x 1957
+2024-12-13 00:10:50,358 DEBUG  : Loaded claw machine: button A = 65 x 21, button B = 23 x 54, prize = 8456 x 3041
+2024-12-13 00:10:50,358 DEBUG  : Loaded claw machine: button A = 29 x 52, button B = 42 x 17, prize = 7340 x 17904
+2024-12-13 00:10:50,358 DEBUG  : Loaded claw machine: button A = 97 x 15, button B = 78 x 75, prize = 10291 x 6060
+2024-12-13 00:10:50,358 DEBUG  : Loaded claw machine: button A = 14 x 48, button B = 49 x 26, prize = 18015 x 4490
+2024-12-13 00:10:50,358 DEBUG  : Loaded claw machine: button A = 47 x 16, button B = 38 x 68, prize = 4834 x 6688
+2024-12-13 00:10:50,358 DEBUG  : Loaded claw machine: button A = 76 x 19, button B = 16 x 62, prize = 18040 x 6100
+2024-12-13 00:10:50,358 DEBUG  : Loaded claw machine: button A = 15 x 43, button B = 44 x 15, prize = 18354 x 6234
+2024-12-13 00:10:50,358 DEBUG  : Loaded claw machine: button A = 27 x 73, button B = 63 x 20, prize = 18080 x 2029
+2024-12-13 00:10:50,358 DEBUG  : Loaded claw machine: button A = 52 x 78, button B = 73 x 31, prize = 6369 x 3823
+2024-12-13 00:10:50,358 DEBUG  : Loaded claw machine: button A = 16 x 55, button B = 33 x 16, prize = 19647 x 4165
+2024-12-13 00:10:50,358 DEBUG  : Loaded claw machine: button A = 23 x 17, button B = 37 x 86, prize = 2569 x 3893
+2024-12-13 00:10:50,358 DEBUG  : Loaded claw machine: button A = 18 x 57, button B = 70 x 17, prize = 10998 x 4825
+2024-12-13 00:10:50,358 DEBUG  : Loaded claw machine: button A = 16 x 31, button B = 61 x 36, prize = 262 x 11902
+2024-12-13 00:10:50,358 DEBUG  : Loaded claw machine: button A = 48 x 27, button B = 13 x 43, prize = 6877 x 7117
+2024-12-13 00:10:50,358 DEBUG  : Loaded claw machine: button A = 13 x 36, button B = 49 x 27, prize = 5930 x 12113
+2024-12-13 00:10:50,359 DEBUG  : Loaded claw machine: button A = 62 x 21, button B = 31 x 76, prize = 3184 x 1310
+2024-12-13 00:10:50,359 DEBUG  : Loaded claw machine: button A = 55 x 13, button B = 33 x 83, prize = 11298 x 1134
+2024-12-13 00:10:50,359 DEBUG  : Loaded claw machine: button A = 68 x 13, button B = 63 x 92, prize = 2972 x 888
+2024-12-13 00:10:50,359 DEBUG  : Loaded claw machine: button A = 18 x 24, button B = 71 x 11, prize = 6903 x 2427
+2024-12-13 00:10:50,359 DEBUG  : Loaded claw machine: button A = 84 x 17, button B = 40 x 53, prize = 4860 x 1253
+2024-12-13 00:10:50,359 DEBUG  : Loaded claw machine: button A = 74 x 39, button B = 17 x 51, prize = 5051 x 6797
+2024-12-13 00:10:50,359 DEBUG  : Loaded claw machine: button A = 65 x 18, button B = 24 x 76, prize = 9457 x 8214
+2024-12-13 00:10:50,359 DEBUG  : Loaded claw machine: button A = 66 x 22, button B = 14 x 43, prize = 810 x 14750
+2024-12-13 00:10:50,359 DEBUG  : Loaded claw machine: button A = 12 x 82, button B = 93 x 70, prize = 3672 x 9258
+2024-12-13 00:10:50,359 DEBUG  : Loaded claw machine: button A = 63 x 26, button B = 35 x 56, prize = 3948 x 3998
+2024-12-13 00:10:50,360 DEBUG  : Loaded claw machine: button A = 51 x 25, button B = 28 x 54, prize = 3832 x 4456
+2024-12-13 00:10:50,360 DEBUG  : Loaded claw machine: button A = 24 x 62, button B = 67 x 33, prize = 14082 x 8066
+2024-12-13 00:10:50,360 DEBUG  : Loaded claw machine: button A = 33 x 15, button B = 28 x 54, prize = 4793 x 1049
+2024-12-13 00:10:50,360 DEBUG  : Loaded claw machine: button A = 58 x 25, button B = 27 x 60, prize = 5684 x 3440
+2024-12-13 00:10:50,360 DEBUG  : Loaded claw machine: button A = 51 x 27, button B = 12 x 33, prize = 6641 x 12200
+2024-12-13 00:10:50,360 DEBUG  : Loaded claw machine: button A = 91 x 41, button B = 39 x 93, prize = 9633 x 11355
+2024-12-13 00:10:50,360 DEBUG  : Loaded claw machine: button A = 16 x 41, button B = 60 x 19, prize = 11624 x 17434
+2024-12-13 00:10:50,360 DEBUG  : Loaded claw machine: button A = 23 x 62, button B = 70 x 33, prize = 6285 x 5378
+2024-12-13 00:10:50,360 DEBUG  : Loaded claw machine: button A = 63 x 38, button B = 24 x 52, prize = 18713 x 4086
+2024-12-13 00:10:50,360 DEBUG  : Loaded claw machine: button A = 92 x 17, button B = 44 x 96, prize = 6932 x 9980
+2024-12-13 00:10:50,360 DEBUG  : Loaded claw machine: button A = 92 x 99, button B = 99 x 17, prize = 9724 x 2585
+2024-12-13 00:10:50,360 DEBUG  : Loaded claw machine: button A = 95 x 16, button B = 63 x 62, prize = 11570 x 5032
+2024-12-13 00:10:50,360 DEBUG  : Loaded claw machine: button A = 49 x 18, button B = 18 x 28, prize = 5064 x 2288
+2024-12-13 00:10:50,361 DEBUG  : Loaded claw machine: button A = 35 x 77, button B = 53 x 14, prize = 16536 x 13857
+2024-12-13 00:10:50,361 DEBUG  : Loaded claw machine: button A = 14 x 41, button B = 89 x 71, prize = 8902 x 8623
+2024-12-13 00:10:50,361 DEBUG  : Loaded claw machine: button A = 49 x 17, button B = 27 x 70, prize = 18325 x 2157
+2024-12-13 00:10:50,361 DEBUG  : Loaded claw machine: button A = 20 x 57, button B = 54 x 18, prize = 19442 x 3419
+2024-12-13 00:10:50,361 DEBUG  : Loaded claw machine: button A = 11 x 25, button B = 72 x 42, prize = 8781 x 6799
+2024-12-13 00:10:50,361 DEBUG  : Loaded claw machine: button A = 20 x 48, button B = 61 x 37, prize = 10609 x 5109
+2024-12-13 00:10:50,361 DEBUG  : Loaded claw machine: button A = 19 x 45, button B = 42 x 12, prize = 253 x 1835
+2024-12-13 00:10:50,361 DEBUG  : Loaded claw machine: button A = 15 x 48, button B = 64 x 16, prize = 17517 x 13728
+2024-12-13 00:10:50,361 DEBUG  : Loaded claw machine: button A = 52 x 13, button B = 25 x 66, prize = 8798 x 10188
+2024-12-13 00:10:50,361 DEBUG  : Loaded claw machine: button A = 20 x 46, button B = 51 x 30, prize = 12086 x 9494
+2024-12-13 00:10:50,361 DEBUG  : Loaded claw machine: button A = 21 x 58, button B = 63 x 22, prize = 17063 x 1590
+2024-12-13 00:10:50,361 DEBUG  : Loaded claw machine: button A = 11 x 39, button B = 75 x 30, prize = 2732 x 8453
+2024-12-13 00:10:50,361 DEBUG  : Loaded claw machine: button A = 57 x 26, button B = 26 x 47, prize = 16605 x 523
+2024-12-13 00:10:50,361 DEBUG  : Loaded claw machine: button A = 64 x 21, button B = 18 x 80, prize = 2504 x 5860
+2024-12-13 00:10:50,362 DEBUG  : Loaded claw machine: button A = 83 x 15, button B = 56 x 57, prize = 4586 x 4251
+2024-12-13 00:10:50,362 DEBUG  : Loaded claw machine: button A = 33 x 13, button B = 27 x 58, prize = 12359 x 17846
+2024-12-13 00:10:50,362 DEBUG  : Loaded claw machine: button A = 19 x 39, button B = 59 x 19, prize = 7183 x 19763
+2024-12-13 00:10:50,362 DEBUG  : Loaded claw machine: button A = 17 x 11, button B = 22 x 49, prize = 9203 x 17789
+2024-12-13 00:10:50,362 DEBUG  : Loaded claw machine: button A = 28 x 99, button B = 87 x 11, prize = 2165 x 6765
+2024-12-13 00:10:50,362 DEBUG  : Loaded claw machine: button A = 69 x 28, button B = 52 x 70, prize = 10406 x 8428
+2024-12-13 00:10:50,362 DEBUG  : Loaded claw machine: button A = 30 x 12, button B = 53 x 76, prize = 13030 x 14808
+2024-12-13 00:10:50,362 DEBUG  : Loaded claw machine: button A = 17 x 49, button B = 47 x 28, prize = 9223 x 9615
+2024-12-13 00:10:50,362 DEBUG  : Loaded claw machine: button A = 33 x 34, button B = 76 x 15, prize = 2661 x 1982
+2024-12-13 00:10:50,362 DEBUG  : Loaded claw machine: button A = 19 x 50, button B = 44 x 15, prize = 8425 x 17470
+2024-12-13 00:10:50,362 DEBUG  : Loaded claw machine: button A = 80 x 45, button B = 17 x 65, prize = 3863 x 4335
+2024-12-13 00:10:50,362 DEBUG  : Loaded claw machine: button A = 27 x 16, button B = 14 x 28, prize = 8861 x 17640
+2024-12-13 00:10:50,362 DEBUG  : Loaded claw machine: button A = 32 x 91, button B = 61 x 52, prize = 5445 x 10504
+2024-12-13 00:10:50,362 DEBUG  : Loaded claw machine: button A = 13 x 42, button B = 58 x 38, prize = 6888 x 14140
+2024-12-13 00:10:50,363 DEBUG  : Loaded claw machine: button A = 25 x 61, button B = 40 x 11, prize = 1375 x 16891
+2024-12-13 00:10:50,363 DEBUG  : Loaded claw machine: button A = 11 x 52, button B = 75 x 29, prize = 4368 x 12074
+2024-12-13 00:10:50,363 DEBUG  : Loaded claw machine: button A = 22 x 53, button B = 56 x 29, prize = 7670 x 8250
+2024-12-13 00:10:50,363 DEBUG  : Loaded claw machine: button A = 32 x 11, button B = 32 x 68, prize = 7360 x 16987
+2024-12-13 00:10:50,363 DEBUG  : Loaded claw machine: button A = 18 x 46, button B = 33 x 16, prize = 3564 x 2548
+2024-12-13 00:10:50,363 DEBUG  : Loaded claw machine: button A = 11 x 46, button B = 54 x 32, prize = 10843 x 10358
+2024-12-13 00:10:50,363 DEBUG  : Loaded claw machine: button A = 60 x 83, button B = 32 x 13, prize = 16748 x 18281
+2024-12-13 00:10:50,363 DEBUG  : Loaded claw machine: button A = 32 x 59, button B = 97 x 19, prize = 6823 x 6346
+2024-12-13 00:10:50,363 DEBUG  : Loaded claw machine: button A = 96 x 60, button B = 47 x 94, prize = 9828 x 10020
+2024-12-13 00:10:50,363 DEBUG  : Loaded claw machine: button A = 12 x 72, button B = 81 x 86, prize = 3333 x 8398
+2024-12-13 00:10:50,363 DEBUG  : Loaded claw machine: button A = 59 x 30, button B = 54 x 97, prize = 7038 x 5804
+2024-12-13 00:10:50,363 DEBUG  : Loaded claw machine: button A = 21 x 45, button B = 48 x 27, prize = 12056 x 269
+2024-12-13 00:10:50,363 DEBUG  : Loaded claw machine: button A = 80 x 31, button B = 30 x 82, prize = 4020 x 5921
+2024-12-13 00:10:50,363 DEBUG  : Loaded claw machine: button A = 80 x 35, button B = 25 x 55, prize = 6620 x 4130
+2024-12-13 00:10:50,363 DEBUG  : Loaded claw machine: button A = 31 x 18, button B = 13 x 31, prize = 15898 x 6859
+2024-12-13 00:10:50,364 DEBUG  : Loaded claw machine: button A = 80 x 30, button B = 20 x 43, prize = 5820 x 3283
+2024-12-13 00:10:50,364 DEBUG  : Loaded claw machine: button A = 13 x 27, button B = 34 x 15, prize = 17252 x 377
+2024-12-13 00:10:50,364 DEBUG  : Loaded claw machine: button A = 49 x 11, button B = 40 x 76, prize = 16449 x 15823
+2024-12-13 00:10:50,364 DEBUG  : Loaded claw machine: button A = 92 x 32, button B = 28 x 48, prize = 7096 x 2736
+2024-12-13 00:10:50,364 DEBUG  : Loaded claw machine: button A = 22 x 76, button B = 54 x 13, prize = 19030 x 18217
+2024-12-13 00:10:50,364 DEBUG  : Loaded claw machine: button A = 98 x 24, button B = 56 x 62, prize = 1162 x 864
+2024-12-13 00:10:50,364 DEBUG  : Loaded claw machine: button A = 32 x 80, button B = 72 x 45, prize = 4448 x 7340
+2024-12-13 00:10:50,364 DEBUG  : Loaded claw machine: button A = 45 x 16, button B = 14 x 27, prize = 13215 x 3378
+2024-12-13 00:10:50,364 DEBUG  : Loaded claw machine: button A = 13 x 25, button B = 34 x 19, prize = 8660 x 3962
+2024-12-13 00:10:50,364 DEBUG  : Loaded claw machine: button A = 78 x 32, button B = 12 x 61, prize = 14312 x 6693
+2024-12-13 00:10:50,364 DEBUG  : Loaded claw machine: button A = 17 x 72, button B = 53 x 53, prize = 1650 x 5445
+2024-12-13 00:10:50,364 DEBUG  : Loaded claw machine: button A = 99 x 51, button B = 12 x 53, prize = 10587 x 9293
+2024-12-13 00:10:50,364 DEBUG  : Loaded claw machine: button A = 19 x 62, button B = 72 x 52, prize = 6359 x 8310
+2024-12-13 00:10:50,364 DEBUG  : Loaded claw machine: button A = 75 x 31, button B = 13 x 40, prize = 8828 x 551
+2024-12-13 00:10:50,365 DEBUG  : Loaded claw machine: button A = 64 x 14, button B = 26 x 42, prize = 6138 x 3122
+2024-12-13 00:10:50,365 DEBUG  : Loaded claw machine: button A = 23 x 89, button B = 92 x 15, prize = 10143 x 5490
+2024-12-13 00:10:50,365 DEBUG  : Loaded claw machine: button A = 19 x 45, button B = 71 x 52, prize = 1728 x 1421
+2024-12-13 00:10:50,365 DEBUG  : Loaded claw machine: button A = 72 x 19, button B = 32 x 62, prize = 8328 x 4929
+2024-12-13 00:10:50,365 DEBUG  : Loaded claw machine: button A = 15 x 77, button B = 44 x 11, prize = 16875 x 8812
+2024-12-13 00:10:50,365 DEBUG  : Loaded claw machine: button A = 13 x 66, button B = 82 x 31, prize = 10424 x 874
+2024-12-13 00:10:50,365 DEBUG  : Loaded claw machine: button A = 53 x 27, button B = 36 x 58, prize = 1610 x 2010
+2024-12-13 00:10:50,365 DEBUG  : Loaded claw machine: button A = 16 x 82, button B = 71 x 16, prize = 6923 x 8694
+2024-12-13 00:10:50,365 DEBUG  : Loaded claw machine: button A = 95 x 73, button B = 13 x 61, prize = 8506 x 10464
+2024-12-13 00:10:50,365 DEBUG  : Loaded claw machine: button A = 78 x 23, button B = 12 x 59, prize = 4266 x 4031
+2024-12-13 00:10:50,365 DEBUG  : Loaded claw machine: button A = 31 x 87, button B = 71 x 36, prize = 1330 x 2100
+2024-12-13 00:10:50,365 DEBUG  : Loaded claw machine: button A = 15 x 55, button B = 38 x 13, prize = 16129 x 12049
+2024-12-13 00:10:50,365 DEBUG  : Loaded claw machine: button A = 74 x 18, button B = 14 x 50, prize = 6380 x 1904
+2024-12-13 00:10:50,365 DEBUG  : Loaded claw machine: button A = 36 x 19, button B = 13 x 31, prize = 13245 x 15500
+2024-12-13 00:10:50,366 DEBUG  : Loaded claw machine: button A = 37 x 16, button B = 18 x 33, prize = 13068 x 10692
+2024-12-13 00:10:50,366 DEBUG  : Loaded claw machine: button A = 56 x 20, button B = 29 x 62, prize = 5211 x 3462
+2024-12-13 00:10:50,366 DEBUG  : Loaded claw machine: button A = 26 x 59, button B = 45 x 19, prize = 399 x 7100
+2024-12-13 00:10:50,366 DEBUG  : Loaded claw machine: button A = 52 x 14, button B = 25 x 77, prize = 2490 x 9454
+2024-12-13 00:10:50,366 DEBUG  : Loaded claw machine: button A = 42 x 11, button B = 20 x 36, prize = 9786 x 1137
+2024-12-13 00:10:50,366 DEBUG  : Loaded claw machine: button A = 61 x 14, button B = 49 x 93, prize = 6529 x 7303
+2024-12-13 00:10:50,366 DEBUG  : Loaded claw machine: button A = 27 x 17, button B = 12 x 41, prize = 11438 x 1948
+2024-12-13 00:10:50,366 DEBUG  : Loaded claw machine: button A = 53 x 11, button B = 54 x 88, prize = 5465 x 5665
+2024-12-13 00:10:50,366 DEBUG  : Loaded claw machine: button A = 15 x 77, button B = 78 x 18, prize = 4700 x 10332
+2024-12-13 00:10:50,366 DEBUG  : Loaded claw machine: button A = 11 x 59, button B = 48 x 19, prize = 15210 x 9409
+2024-12-13 00:10:50,366 DEBUG  : Loaded claw machine: button A = 16 x 52, button B = 41 x 17, prize = 8584 x 11248
+2024-12-13 00:10:50,366 DEBUG  : Loaded claw machine: button A = 56 x 13, button B = 29 x 68, prize = 2453 x 17869
+2024-12-13 00:10:50,366 DEBUG  : Loaded claw machine: button A = 35 x 91, button B = 76 x 17, prize = 3918 x 6033
+2024-12-13 00:10:50,367 DEBUG  : Loaded claw machine: button A = 77 x 57, button B = 21 x 50, prize = 5152 x 6708
+2024-12-13 00:10:50,367 DEBUG  : Loaded claw machine: button A = 91 x 83, button B = 75 x 12, prize = 12690 x 8190
+2024-12-13 00:10:50,367 DEBUG  : Loaded claw machine: button A = 14 x 55, button B = 73 x 19, prize = 11601 x 15256
+2024-12-13 00:10:50,367 DEBUG  : Loaded claw machine: button A = 50 x 22, button B = 15 x 90, prize = 5055 x 5310
+2024-12-13 00:10:50,367 DEBUG  : Loaded claw machine: button A = 18 x 89, button B = 68 x 44, prize = 3436 x 7638
+2024-12-13 00:10:50,367 DEBUG  : Loaded claw machine: button A = 39 x 17, button B = 33 x 62, prize = 3546 x 5593
+2024-12-13 00:10:50,367 DEBUG  : Loaded claw machine: button A = 12 x 37, button B = 69 x 37, prize = 14282 x 9906
+2024-12-13 00:10:50,367 DEBUG  : Loaded claw machine: button A = 63 x 14, button B = 12 x 59, prize = 13250 x 17592
+2024-12-13 00:10:50,367 DEBUG  : Loaded claw machine: button A = 36 x 13, button B = 11 x 27, prize = 2067 x 13051
+2024-12-13 00:10:50,367 DEBUG  : Loaded claw machine: button A = 20 x 41, button B = 66 x 12, prize = 5388 x 3894
+2024-12-13 00:10:50,367 DEBUG  : Loaded claw machine: button A = 20 x 56, button B = 67 x 13, prize = 19450 x 8218
+2024-12-13 00:10:50,367 DEBUG  : Loaded claw machine: button A = 78 x 54, button B = 12 x 79, prize = 1170 x 6324
+2024-12-13 00:10:50,367 DEBUG  : Loaded claw machine: button A = 90 x 18, button B = 85 x 85, prize = 3190 x 2542
+2024-12-13 00:10:50,367 DEBUG  : Loaded claw machine: button A = 41 x 55, button B = 33 x 11, prize = 4748 x 13212
+2024-12-13 00:10:50,368 DEBUG  : Loaded claw machine: button A = 14 x 32, button B = 71 x 43, prize = 7996 x 7508
+2024-12-13 00:10:50,368 DEBUG  : Loaded claw machine: button A = 21 x 62, button B = 29 x 12, prize = 9063 x 14936
+2024-12-13 00:10:50,368 DEBUG  : Loaded claw machine: button A = 22 x 62, button B = 55 x 16, prize = 2156 x 4130
+2024-12-13 00:10:50,368 DEBUG  : Loaded claw machine: button A = 59 x 14, button B = 74 x 83, prize = 12057 x 8358
+2024-12-13 00:10:50,368 DEBUG  : Loaded claw machine: button A = 14 x 37, button B = 76 x 19, prize = 5898 x 2312
+2024-12-13 00:10:50,368 DEBUG  : Loaded claw machine: button A = 91 x 15, button B = 59 x 69, prize = 3305 x 1671
+2024-12-13 00:10:50,368 DEBUG  : Loaded claw machine: button A = 15 x 37, button B = 49 x 36, prize = 7184 x 9695
+2024-12-13 00:10:50,368 DEBUG  : Loaded claw machine: button A = 20 x 41, button B = 43 x 18, prize = 463 x 10089
+2024-12-13 00:10:50,368 DEBUG  : Loaded claw machine: button A = 94 x 44, button B = 30 x 82, prize = 7600 x 5868
+2024-12-13 00:10:50,368 DEBUG  : Loaded claw machine: button A = 96 x 13, button B = 32 x 33, prize = 3424 x 693
+2024-12-13 00:10:50,368 DEBUG  : Loaded claw machine: button A = 36 x 68, button B = 79 x 14, prize = 7294 x 4312
+2024-12-13 00:10:50,368 DEBUG  : Loaded claw machine: button A = 20 x 68, button B = 60 x 23, prize = 8420 x 15573
+2024-12-13 00:10:50,368 DEBUG  : Loaded claw machine: button A = 27 x 74, button B = 62 x 17, prize = 3968 x 16866
+2024-12-13 00:10:50,368 DEBUG  : Loaded claw machine: button A = 73 x 29, button B = 17 x 45, prize = 3900 x 5444
+2024-12-13 00:10:50,368 DEBUG  : Loaded claw machine: button A = 27 x 52, button B = 36 x 12, prize = 693 x 876
+2024-12-13 00:10:50,369 DEBUG  : Loaded claw machine: button A = 37 x 18, button B = 31 x 51, prize = 6019 x 18734
+2024-12-13 00:10:50,369 DEBUG  : Loaded claw machine: button A = 29 x 76, button B = 42 x 13, prize = 11614 x 2906
+2024-12-13 00:10:50,369 DEBUG  : Loaded claw machine: button A = 14 x 42, button B = 59 x 35, prize = 18349 x 11813
+2024-12-13 00:10:50,369 DEBUG  : Loaded claw machine: button A = 68 x 48, button B = 39 x 92, prize = 6801 x 9636
+2024-12-13 00:10:50,369 DEBUG  : Loaded claw machine: button A = 25 x 41, button B = 75 x 35, prize = 7025 x 4481
+2024-12-13 00:10:50,369 DEBUG  : Loaded claw machine: button A = 64 x 37, button B = 11 x 21, prize = 6001 x 11072
+2024-12-13 00:10:50,369 DEBUG  : Loaded claw machine: button A = 58 x 26, button B = 28 x 70, prize = 6296 x 7648
+2024-12-13 00:10:50,369 DEBUG  : Loaded claw machine: button A = 14 x 53, button B = 81 x 42, prize = 6345 x 17070
+2024-12-13 00:10:50,369 DEBUG  : Loaded claw machine: button A = 14 x 42, button B = 62 x 18, prize = 2166 x 18194
+2024-12-13 00:10:50,369 DEBUG  : Loaded claw machine: button A = 20 x 75, button B = 48 x 33, prize = 2368 x 5058
+2024-12-13 00:10:50,369 DEBUG  : Loaded claw machine: button A = 25 x 46, button B = 47 x 19, prize = 13106 x 17558
+2024-12-13 00:10:50,369 DEBUG  : Loaded claw machine: button A = 44 x 16, button B = 45 x 82, prize = 3277 x 2570
+2024-12-13 00:10:50,369 DEBUG  : Loaded claw machine: button A = 86 x 30, button B = 21 x 91, prize = 4067 x 8029
+2024-12-13 00:10:50,369 DEBUG  : Loaded claw machine: button A = 31 x 80, button B = 85 x 38, prize = 4335 x 7560
+2024-12-13 00:10:50,370 DEBUG  : Loaded claw machine: button A = 61 x 23, button B = 17 x 47, prize = 4852 x 2260
+2024-12-13 00:10:50,370 DEBUG  : Loaded claw machine: button A = 60 x 15, button B = 21 x 57, prize = 13505 x 1985
+2024-12-13 00:10:50,370 DEBUG  : Loaded claw machine: button A = 36 x 16, button B = 27 x 43, prize = 16037 x 9885
+2024-12-13 00:10:50,370 DEBUG  : Loaded claw machine: button A = 46 x 13, button B = 21 x 66, prize = 13369 x 6940
+2024-12-13 00:10:50,370 DEBUG  : Loaded claw machine: button A = 14 x 45, button B = 26 x 16, prize = 9320 x 13990
+2024-12-13 00:10:50,370 DEBUG  : Loaded claw machine: button A = 14 x 26, button B = 92 x 25, prize = 8294 x 4318
+2024-12-13 00:10:50,370 DEBUG  : Loaded claw machine: button A = 53 x 19, button B = 14 x 26, prize = 16384 x 10312
+2024-12-13 00:10:50,370 DEBUG  : Loaded claw machine: button A = 52 x 75, button B = 63 x 26, prize = 6045 x 2816
+2024-12-13 00:10:50,370 DEBUG  : Loaded claw machine: button A = 15 x 43, button B = 71 x 23, prize = 16775 x 9495
+2024-12-13 00:10:50,370 DEBUG  : Loaded claw machine: button A = 69 x 33, button B = 40 x 99, prize = 6091 x 4191
+2024-12-13 00:10:50,370 DEBUG  : Loaded claw machine: button A = 99 x 32, button B = 36 x 51, prize = 7065 x 5787
+2024-12-13 00:10:50,370 DEBUG  : Loaded claw machine: button A = 47 x 70, button B = 60 x 26, prize = 2586 x 2014
+2024-12-13 00:10:50,370 DEBUG  : Loaded claw machine: button A = 91 x 27, button B = 31 x 68, prize = 8982 x 8310
+2024-12-13 00:10:50,370 DEBUG  : Loaded claw machine: button A = 93 x 45, button B = 32 x 62, prize = 2799 x 1773
+2024-12-13 00:10:50,370 DEBUG  : Loaded claw machine: button A = 19 x 38, button B = 45 x 13, prize = 13235 x 531
+2024-12-13 00:10:50,371 DEBUG  : Loaded claw machine: button A = 25 x 44, button B = 59 x 27, prize = 5501 x 2843
+2024-12-13 00:10:50,371 DEBUG  : Loaded claw machine: button A = 18 x 36, button B = 68 x 43, prize = 2396 x 13667
+2024-12-13 00:10:50,371 DEBUG  : Loaded claw machine: button A = 67 x 31, button B = 16 x 61, prize = 9339 x 13839
+2024-12-13 00:10:50,371 DEBUG  : Loaded claw machine: button A = 50 x 18, button B = 59 x 94, prize = 7668 x 6544
+2024-12-13 00:10:50,371 DEBUG  : Loaded claw machine: button A = 76 x 12, button B = 56 x 66, prize = 7032 x 6426
+2024-12-13 00:10:50,371 DEBUG  : Loaded claw machine: button A = 14 x 37, button B = 65 x 35, prize = 13499 x 18892
+2024-12-13 00:10:50,371 DEBUG  : Loaded claw machine: button A = 17 x 35, button B = 21 x 12, prize = 4779 x 16569
+2024-12-13 00:10:50,371 DEBUG  : Loaded claw machine: button A = 35 x 41, button B = 83 x 16, prize = 4487 x 1276
+2024-12-13 00:10:50,371 DEBUG  : Loaded claw machine: button A = 39 x 37, button B = 95 x 15, prize = 6688 x 2814
+2024-12-13 00:10:50,371 DEBUG  : Loaded claw machine: button A = 26 x 55, button B = 35 x 15, prize = 8743 x 6110
+2024-12-13 00:10:50,371 DEBUG  : Loaded claw machine: button A = 42 x 34, button B = 22 x 75, prize = 958 x 2720
+2024-12-13 00:10:50,371 DEBUG  : Loaded claw machine: button A = 67 x 20, button B = 18 x 60, prize = 14996 x 6200
+2024-12-13 00:10:50,371 DEBUG  : Loaded claw machine: button A = 13 x 49, button B = 68 x 33, prize = 17288 x 1213
+2024-12-13 00:10:50,371 DEBUG  : Loaded claw machine: button A = 13 x 56, button B = 67 x 31, prize = 4233 x 3808
+2024-12-13 00:10:50,371 DEBUG  : Loaded claw machine: button A = 65 x 17, button B = 13 x 45, prize = 7790 x 14958
+2024-12-13 00:10:50,372 DEBUG  : Loaded claw machine: button A = 42 x 17, button B = 11 x 44, prize = 18067 x 5940
+2024-12-13 00:10:50,372 DEBUG  : Loaded claw machine: button A = 14 x 40, button B = 49 x 11, prize = 5873 x 4009
+2024-12-13 00:10:50,372 DEBUG  : Loaded claw machine: button A = 70 x 27, button B = 26 x 42, prize = 9094 x 6513
+2024-12-13 00:10:50,372 DEBUG  : Loaded claw machine: button A = 58 x 31, button B = 16 x 30, prize = 2210 x 10445
+2024-12-13 00:10:50,372 DEBUG  : Loaded claw machine: button A = 38 x 79, button B = 80 x 54, prize = 10226 x 10477
+2024-12-13 00:10:50,372 DEBUG  : Loaded claw machine: button A = 61 x 51, button B = 34 x 96, prize = 1296 x 1962
+2024-12-13 00:10:50,372 DEBUG  : Loaded claw machine: button A = 66 x 24, button B = 60 x 83, prize = 5970 x 7249
+2024-12-13 00:10:50,372 DEBUG  : Loaded claw machine: button A = 77 x 33, button B = 15 x 56, prize = 5348 x 10861
+2024-12-13 00:10:50,372 DEBUG  : Loaded claw machine: button A = 97 x 16, button B = 15 x 75, prize = 3718 x 2644
+2024-12-13 00:10:50,372 DEBUG  : Loaded claw machine: button A = 18 x 66, button B = 57 x 23, prize = 1331 x 461
+2024-12-13 00:10:50,372 DEBUG  : Loaded claw machine: button A = 86 x 19, button B = 11 x 68, prize = 11493 x 13480
+2024-12-13 00:10:50,372 DEBUG  : Loaded claw machine: button A = 58 x 19, button B = 27 x 65, prize = 4463 x 3989
+2024-12-13 00:10:50,372 DEBUG  : Loaded claw machine: button A = 22 x 99, button B = 58 x 47, prize = 4658 x 9619
+2024-12-13 00:10:50,373 DEBUG  : Loaded claw machine: button A = 41 x 77, button B = 83 x 15, prize = 3826 x 5354
+2024-12-13 00:10:50,373 DEBUG  : Loaded claw machine: button A = 61 x 87, button B = 88 x 23, prize = 9185 x 7872
+2024-12-13 00:10:50,373 DEBUG  : Loaded claw machine: button A = 29 x 85, button B = 92 x 70, prize = 1756 x 3350
+2024-12-13 00:10:50,373 DEBUG  : Loaded claw machine: button A = 34 x 14, button B = 34 x 53, prize = 9560 x 6383
+2024-12-13 00:10:50,373 DEBUG  : Loaded claw machine: button A = 58 x 22, button B = 27 x 57, prize = 3229 x 11191
+2024-12-13 00:10:50,373 DEBUG  : Loaded claw machine: button A = 23 x 11, button B = 24 x 63, prize = 17926 x 17857
+2024-12-13 00:10:50,373 DEBUG  : Loaded claw machine: button A = 13 x 73, button B = 99 x 22, prize = 979 x 1760
+2024-12-13 00:10:50,373 DEBUG  : Loaded claw machine: button A = 85 x 14, button B = 69 x 68, prize = 3893 x 1604
+2024-12-13 00:10:50,373 DEBUG  : Loaded claw machine: button A = 35 x 70, button B = 48 x 13, prize = 13198 x 8123
+2024-12-13 00:10:50,373 DEBUG  : Loaded claw machine: button A = 19 x 48, button B = 41 x 17, prize = 12712 x 4069
+2024-12-13 00:10:50,373 DEBUG  : Loaded claw machine: button A = 76 x 29, button B = 74 x 98, prize = 2248 x 1974
+2024-12-13 00:10:50,373 DEBUG  : Loaded claw machine: button A = 18 x 60, button B = 36 x 33, prize = 4716 x 7716
+2024-12-13 00:10:50,373 DEBUG  : Loaded claw machine: button A = 13 x 38, button B = 35 x 21, prize = 15360 x 18553
+2024-12-13 00:10:50,373 DEBUG  : Loaded claw machine: button A = 30 x 86, button B = 79 x 47, prize = 8027 x 8115
+2024-12-13 00:10:50,374 DEBUG  : Loaded claw machine: button A = 29 x 11, button B = 43 x 59, prize = 9067 x 12323
+2024-12-13 00:10:50,374 DEBUG  : Loaded claw machine: button A = 37 x 12, button B = 13 x 37, prize = 5632 x 200
+2024-12-13 00:10:50,374 DEBUG  : Loaded claw machine: button A = 83 x 20, button B = 19 x 72, prize = 6469 x 6548
+2024-12-13 00:10:50,374 DEBUG  : Loaded claw machine: button A = 65 x 20, button B = 21 x 61, prize = 16475 x 4040
+2024-12-13 00:10:50,374 DEBUG  : Loaded claw machine: button A = 44 x 14, button B = 36 x 78, prize = 5748 x 16506
+2024-12-13 00:10:50,374 DEBUG  : Loaded claw machine: button A = 30 x 11, button B = 20 x 57, prize = 14450 x 18684
+2024-12-13 00:10:50,374 DEBUG  : Loaded claw machine: button A = 67 x 19, button B = 22 x 72, prize = 13334 x 18046
+2024-12-13 00:10:50,374 DEBUG  : Loaded claw machine: button A = 44 x 46, button B = 85 x 16, prize = 4389 x 2184
+2024-12-13 00:10:50,374 DEBUG  : Loaded claw machine: button A = 61 x 28, button B = 24 x 62, prize = 9152 x 946
+2024-12-13 00:10:50,374 DEBUG  : Loaded claw machine: button A = 62 x 11, button B = 30 x 63, prize = 6224 x 5084
+2024-12-13 00:10:50,374 DEBUG  : Loaded claw machine: button A = 60 x 33, button B = 15 x 28, prize = 16985 x 17028
+2024-12-13 00:10:50,374 DEBUG  : Loaded claw machine: button A = 17 x 45, button B = 45 x 26, prize = 12775 x 255
+2024-12-13 00:10:50,374 DEBUG  : Loaded claw machine: button A = 32 x 52, button B = 39 x 14, prize = 16202 x 7912
+2024-12-13 00:10:50,374 DEBUG  : Loaded claw machine: button A = 51 x 11, button B = 90 x 96, prize = 2856 x 1918
+2024-12-13 00:10:50,375 DEBUG  : Loaded claw machine: button A = 55 x 14, button B = 21 x 59, prize = 7579 x 18566
+2024-12-13 00:10:50,375 DEBUG  : Loaded claw machine: button A = 20 x 45, button B = 47 x 32, prize = 6786 x 15691
+2024-12-13 00:10:50,375 DEBUG  : Loaded claw machine: button A = 83 x 59, button B = 11 x 83, prize = 1447 x 4111
+2024-12-13 00:10:50,375 DEBUG  : Loaded claw machine: button A = 70 x 23, button B = 16 x 59, prize = 14404 x 585
+2024-12-13 00:10:50,375 DEBUG  : Loaded claw machine: button A = 20 x 50, button B = 55 x 28, prize = 9160 x 1204
+2024-12-13 00:10:50,375 DEBUG  : Loaded claw machine: button A = 68 x 55, button B = 12 x 42, prize = 3188 x 3838
+2024-12-13 00:10:50,375 DEBUG  : Loaded claw machine: button A = 69 x 80, button B = 11 x 89, prize = 5158 x 6819
+2024-12-13 00:10:50,375 DEBUG  : Loaded claw machine: button A = 29 x 61, button B = 55 x 13, prize = 3197 x 8483
+2024-12-13 00:10:50,375 DEBUG  : Loaded claw machine: button A = 74 x 25, button B = 11 x 56, prize = 12703 x 15991
+2024-12-13 00:10:50,375 DEBUG  : Loaded claw machine: button A = 60 x 15, button B = 42 x 95, prize = 4998 x 9615
+2024-12-13 00:10:50,376 DEBUG  : Loaded claw machine: button A = 23 x 32, button B = 87 x 34, prize = 10409 x 6300
+2024-12-13 00:10:50,376 DEBUG  : Loaded claw machine: button A = 11 x 44, button B = 71 x 24, prize = 13268 x 17872
+2024-12-13 00:10:50,376 DEBUG  : Loaded claw machine: button A = 13 x 60, button B = 63 x 22, prize = 6522 x 5106
+2024-12-13 00:10:50,376 DEBUG  : Loaded claw machine: button A = 87 x 32, button B = 11 x 66, prize = 4834 x 4504
+2024-12-13 00:10:50,376 DEBUG  : Loaded claw machine: button A = 55 x 22, button B = 21 x 52, prize = 11757 x 2214
+2024-12-13 00:10:50,377 DEBUG  : Loaded claw machine: button A = 28 x 69, button B = 37 x 13, prize = 3138 x 17965
+2024-12-13 00:10:50,377 DEBUG  : Loaded claw machine: button A = 77 x 13, button B = 19 x 30, prize = 4100 x 2782
+2024-12-13 00:10:50,377 DEBUG  : Loaded claw machine: button A = 29 x 55, button B = 49 x 27, prize = 17241 x 12611
+2024-12-13 00:10:50,377 DEBUG  : Loaded claw machine: button A = 23 x 13, button B = 23 x 75, prize = 3427 x 7703
+2024-12-13 00:10:50,377 DEBUG  : Loaded claw machine: button A = 43 x 32, button B = 17 x 55, prize = 907 x 1649
+2024-12-13 00:10:50,377 DEBUG  : Loaded claw machine: button A = 20 x 71, button B = 65 x 39, prize = 6270 x 5768
+2024-12-13 00:10:50,377 DEBUG  : Loaded claw machine: button A = 11 x 58, button B = 81 x 17, prize = 330 x 17911
+2024-12-13 00:10:50,377 DEBUG  : Loaded claw machine: button A = 22 x 31, button B = 54 x 16, prize = 4142 x 1570
+2024-12-13 00:10:50,377 DEBUG  : Loaded claw machine: button A = 25 x 79, button B = 68 x 12, prize = 19174 x 458
+2024-12-13 00:10:50,377 DEBUG  : Loaded claw machine: button A = 15 x 55, button B = 47 x 18, prize = 6941 x 19714
+2024-12-13 00:10:50,377 DEBUG  : Loaded claw machine: button A = 60 x 30, button B = 48 x 77, prize = 4812 x 5533
+2024-12-13 00:10:50,377 DEBUG  : Loaded claw machine: button A = 71 x 48, button B = 15 x 61, prize = 2520 x 3026
+2024-12-13 00:10:50,378 DEBUG  : Loaded claw machine: button A = 26 x 12, button B = 18 x 29, prize = 3506 x 16969
+2024-12-13 00:10:50,378 DEBUG  : Loaded claw machine: button A = 16 x 80, button B = 82 x 39, prize = 8130 x 10599
+2024-12-13 00:10:50,378 DEBUG  : Loaded claw machine: button A = 32 x 79, button B = 89 x 36, prize = 8654 x 4095
+2024-12-13 00:10:50,378 DEBUG  : Loaded claw machine: button A = 28 x 75, button B = 85 x 60, prize = 2856 x 2955
+2024-12-13 00:10:50,378 DEBUG  : Loaded claw machine: button A = 91 x 51, button B = 20 x 68, prize = 9032 x 6936
+2024-12-13 00:10:50,378 DEBUG  : Loaded claw machine: button A = 36 x 80, button B = 43 x 12, prize = 14547 x 14252
+2024-12-13 00:10:50,378 DEBUG  : Loaded claw machine: button A = 95 x 16, button B = 25 x 23, prize = 2855 x 1627
+2024-12-13 00:10:50,378 DEBUG  : Loaded claw machine: button A = 46 x 23, button B = 49 x 93, prize = 2124 x 2295
+2024-12-13 00:10:50,378 DEBUG  : Loaded claw machine: button A = 27 x 84, button B = 53 x 11, prize = 10279 x 17893
+2024-12-13 00:10:50,378 DEBUG  : Loaded claw machine: button A = 19 x 55, button B = 42 x 23, prize = 12761 x 2299
+2024-12-13 00:10:50,378 DEBUG  : Loaded claw machine: button A = 50 x 66, button B = 75 x 30, prize = 1550 x 1770
+2024-12-13 00:10:50,378 DEBUG  : Loaded claw machine: button A = 27 x 95, button B = 85 x 17, prize = 3986 x 3306
+2024-12-13 00:10:50,378 DEBUG  : Loaded claw machine: button A = 95 x 49, button B = 19 x 85, prize = 8056 x 7088
+2024-12-13 00:10:50,378 DEBUG  : Loaded claw machine: button A = 49 x 68, button B = 88 x 34, prize = 3014 x 2244
+2024-12-13 00:10:50,378 DEBUG  : Loaded claw machine: button A = 46 x 30, button B = 17 x 41, prize = 13436 x 18172
+2024-12-13 00:10:50,379 DEBUG  : Loaded claw machine: button A = 69 x 28, button B = 23 x 60, prize = 5566 x 3576
+2024-12-13 00:10:50,379 DEBUG  : Loaded claw machine: button A = 44 x 54, button B = 12 x 82, prize = 4236 x 11186
+2024-12-13 00:10:50,379 DEBUG  : Loaded claw machine: button A = 11 x 64, button B = 79 x 24, prize = 13813 x 11296
+2024-12-13 00:10:50,379 DEBUG  : Loaded claw machine: button A = 68 x 68, button B = 13 x 93, prize = 1895 x 3095
+2024-12-13 00:10:50,379 DEBUG  : Loaded claw machine: button A = 45 x 17, button B = 44 x 77, prize = 284 x 19673
+2024-12-13 00:10:50,379 DEBUG  : Loaded claw machine: button A = 68 x 14, button B = 67 x 78, prize = 8070 x 7440
+2024-12-13 00:10:50,379 DEBUG  : Loaded claw machine: button A = 73 x 11, button B = 21 x 95, prize = 1919 x 7085
+2024-12-13 00:10:50,379 DEBUG  : Loaded claw machine: button A = 26 x 72, button B = 97 x 35, prize = 2263 x 3697
+2024-12-13 00:10:50,379 DEBUG  : Loaded claw machine: button A = 33 x 13, button B = 36 x 51, prize = 17687 x 14407
+2024-12-13 00:10:50,379 DEBUG  : Loaded claw machine: button A = 62 x 35, button B = 31 x 60, prize = 15832 x 16295
+2024-12-13 00:10:50,379 DEBUG  : Loaded claw machine: button A = 62 x 29, button B = 36 x 89, prize = 8392 x 10059
+2024-12-13 00:10:50,379 DEBUG  : Loaded claw machine: button A = 55 x 28, button B = 48 x 91, prize = 6081 x 8554
+2024-12-13 00:10:50,380 DEBUG  : Loaded claw machine: button A = 13 x 34, button B = 84 x 42, prize = 2351 x 3128
+2024-12-13 00:10:50,380 DEBUG  : Loaded claw machine: button A = 14 x 31, button B = 47 x 30, prize = 13965 x 6961
+2024-12-13 00:10:50,380 DEBUG  : Loaded claw machine: button A = 88 x 74, button B = 15 x 63, prize = 7553 x 10735
+2024-12-13 00:10:50,380 DEBUG  : Loaded claw machine: button A = 70 x 20, button B = 55 x 77, prize = 11750 x 9118
+2024-12-13 00:10:50,380 DEBUG  : Loaded claw machine: button A = 43 x 61, button B = 35 x 15, prize = 5417 x 8049
+2024-12-13 00:10:50,380 DEBUG  : Loaded claw machine: button A = 46 x 25, button B = 28 x 52, prize = 4390 x 3379
+2024-12-13 00:10:50,380 DEBUG  : Loaded claw machine: button A = 25 x 57, button B = 50 x 13, prize = 2025 x 3102
+2024-12-13 00:10:50,380 DEBUG  : Loaded claw machine: button A = 62 x 13, button B = 24 x 64, prize = 1698 x 1023
+2024-12-13 00:10:50,380 DEBUG  : Loaded claw machine: button A = 16 x 71, button B = 61 x 19, prize = 5497 x 4908
+2024-12-13 00:10:50,380 DEBUG  : Loaded claw machine: button A = 23 x 97, button B = 35 x 20, prize = 3969 x 10486
+2024-12-13 00:10:50,380 DEBUG  : Loaded claw machine: button A = 96 x 24, button B = 71 x 71, prize = 5168 x 2144
+2024-12-13 00:10:50,380 DEBUG  : Loaded claw machine: button A = 44 x 73, button B = 33 x 11, prize = 15511 x 6412
+2024-12-13 00:10:50,380 DEBUG  : Loaded claw machine: button A = 42 x 23, button B = 17 x 40, prize = 1178 x 2018
+2024-12-13 00:10:50,380 DEBUG  : Loaded claw machine: button A = 44 x 95, button B = 47 x 32, prize = 7163 x 9560
+2024-12-13 00:10:50,381 INFO   : Loaded 320 claw machines
+2024-12-13 00:10:50,381 DEBUG  : Prize with 36 As and 98 Bs for 206 tokens on machine button A = 62 x 54, button B = 19 x 93, prize = 4094 x 11058
+2024-12-13 00:10:50,382 INFO   : Prize with 206 for claw machine: button A = 62 x 54, button B = 19 x 93, prize = 4094 x 11058
+2024-12-13 00:10:50,382 DEBUG  : Prize with 61 As and 80 Bs for 263 tokens on machine button A = 55 x 93, button B = 83 x 27, prize = 9995 x 7833
+2024-12-13 00:10:50,383 INFO   : Prize with 263 for claw machine: button A = 55 x 93, button B = 83 x 27, prize = 9995 x 7833
+2024-12-13 00:10:50,384 DEBUG  : Prize with 85 As and 47 Bs for 302 tokens on machine button A = 83 x 31, button B = 21 x 34, prize = 8042 x 4233
+2024-12-13 00:10:50,384 INFO   : Prize with 302 for claw machine: button A = 83 x 31, button B = 21 x 34, prize = 8042 x 4233
+2024-12-13 00:10:50,385 INFO   : No prize for claw machine: button A = 21 x 11, button B = 11 x 23, prize = 13963 x 17749
+2024-12-13 00:10:50,386 DEBUG  : Prize with 26 As and 63 Bs for 141 tokens on machine button A = 65 x 97, button B = 83 x 12, prize = 6919 x 3278
+2024-12-13 00:10:50,386 INFO   : Prize with 141 for claw machine: button A = 65 x 97, button B = 83 x 12, prize = 6919 x 3278
+2024-12-13 00:10:50,387 INFO   : No prize for claw machine: button A = 28 x 17, button B = 16 x 43, prize = 19828 x 14869
+2024-12-13 00:10:50,387 INFO   : No prize for claw machine: button A = 26 x 12, button B = 40 x 59, prize = 19660 x 1040
+2024-12-13 00:10:50,389 INFO   : No prize for claw machine: button A = 17 x 80, button B = 77 x 16, prize = 11125 x 19344
+2024-12-13 00:10:50,389 DEBUG  : Prize with 48 As and 46 Bs for 190 tokens on machine button A = 41 x 77, button B = 97 x 15, prize = 6430 x 4386
+2024-12-13 00:10:50,389 INFO   : Prize with 190 for claw machine: button A = 41 x 77, button B = 97 x 15, prize = 6430 x 4386
+2024-12-13 00:10:50,390 DEBUG  : Prize with 42 As and 35 Bs for 161 tokens on machine button A = 18 x 58, button B = 68 x 24, prize = 3136 x 3276
+2024-12-13 00:10:50,390 INFO   : Prize with 161 for claw machine: button A = 18 x 58, button B = 68 x 24, prize = 3136 x 3276
+2024-12-13 00:10:50,390 DEBUG  : Prize with 34 As and 73 Bs for 175 tokens on machine button A = 40 x 39, button B = 21 x 98, prize = 2893 x 8480
+2024-12-13 00:10:50,391 INFO   : Prize with 175 for claw machine: button A = 40 x 39, button B = 21 x 98, prize = 2893 x 8480
+2024-12-13 00:10:50,392 DEBUG  : Prize with 90 As and 53 Bs for 323 tokens on machine button A = 57 x 11, button B = 42 x 99, prize = 7356 x 6237
+2024-12-13 00:10:50,392 INFO   : Prize with 323 for claw machine: button A = 57 x 11, button B = 42 x 99, prize = 7356 x 6237
+2024-12-13 00:10:50,393 INFO   : No prize for claw machine: button A = 21 x 61, button B = 72 x 24, prize = 7049 x 5889
+2024-12-13 00:10:50,394 INFO   : No prize for claw machine: button A = 55 x 21, button B = 20 x 37, prize = 17600 x 18892
+2024-12-13 00:10:50,395 INFO   : No prize for claw machine: button A = 39 x 79, button B = 51 x 14, prize = 11165 x 15493
+2024-12-13 00:10:50,396 DEBUG  : Prize with 19 As and 6 Bs for 63 tokens on machine button A = 59 x 97, button B = 35 x 19, prize = 1331 x 1957
+2024-12-13 00:10:50,396 INFO   : Prize with 63 for claw machine: button A = 59 x 97, button B = 35 x 19, prize = 1331 x 1957
+2024-12-13 00:10:50,396 INFO   : No prize for claw machine: button A = 65 x 21, button B = 23 x 54, prize = 8456 x 3041
+2024-12-13 00:10:50,398 INFO   : No prize for claw machine: button A = 29 x 52, button B = 42 x 17, prize = 7340 x 17904
+2024-12-13 00:10:50,398 DEBUG  : Prize with 49 As and 71 Bs for 218 tokens on machine button A = 97 x 15, button B = 78 x 75, prize = 10291 x 6060
+2024-12-13 00:10:50,399 INFO   : Prize with 218 for claw machine: button A = 97 x 15, button B = 78 x 75, prize = 10291 x 6060
+2024-12-13 00:10:50,400 INFO   : No prize for claw machine: button A = 14 x 48, button B = 49 x 26, prize = 18015 x 4490
+2024-12-13 00:10:50,401 INFO   : No prize for claw machine: button A = 47 x 16, button B = 38 x 68, prize = 4834 x 6688
+2024-12-13 00:10:50,402 INFO   : No prize for claw machine: button A = 76 x 19, button B = 16 x 62, prize = 18040 x 6100
+2024-12-13 00:10:50,404 INFO   : No prize for claw machine: button A = 15 x 43, button B = 44 x 15, prize = 18354 x 6234
+2024-12-13 00:10:50,404 INFO   : No prize for claw machine: button A = 27 x 73, button B = 63 x 20, prize = 18080 x 2029
+2024-12-13 00:10:50,404 DEBUG  : Prize with 20 As and 73 Bs for 133 tokens on machine button A = 52 x 78, button B = 73 x 31, prize = 6369 x 3823
+2024-12-13 00:10:50,405 INFO   : Prize with 133 for claw machine: button A = 52 x 78, button B = 73 x 31, prize = 6369 x 3823
+2024-12-13 00:10:50,406 INFO   : No prize for claw machine: button A = 16 x 55, button B = 33 x 16, prize = 19647 x 4165
+2024-12-13 00:10:50,406 DEBUG  : Prize with 57 As and 34 Bs for 205 tokens on machine button A = 23 x 17, button B = 37 x 86, prize = 2569 x 3893
+2024-12-13 00:10:50,406 INFO   : Prize with 205 for claw machine: button A = 23 x 17, button B = 37 x 86, prize = 2569 x 3893
+2024-12-13 00:10:50,408 INFO   : No prize for claw machine: button A = 18 x 57, button B = 70 x 17, prize = 10998 x 4825
+2024-12-13 00:10:50,408 INFO   : No prize for claw machine: button A = 16 x 31, button B = 61 x 36, prize = 262 x 11902
+2024-12-13 00:10:50,409 INFO   : No prize for claw machine: button A = 48 x 27, button B = 13 x 43, prize = 6877 x 7117
+2024-12-13 00:10:50,410 INFO   : No prize for claw machine: button A = 13 x 36, button B = 49 x 27, prize = 5930 x 12113
+2024-12-13 00:10:50,410 INFO   : No prize for claw machine: button A = 62 x 21, button B = 31 x 76, prize = 3184 x 1310
+2024-12-13 00:10:50,410 INFO   : No prize for claw machine: button A = 55 x 13, button B = 33 x 83, prize = 11298 x 1134
+2024-12-13 00:10:50,411 DEBUG  : Prize with 40 As and 4 Bs for 124 tokens on machine button A = 68 x 13, button B = 63 x 92, prize = 2972 x 888
+2024-12-13 00:10:50,411 INFO   : Prize with 124 for claw machine: button A = 68 x 13, button B = 63 x 92, prize = 2972 x 888
+2024-12-13 00:10:50,411 DEBUG  : Prize with 64 As and 81 Bs for 273 tokens on machine button A = 18 x 24, button B = 71 x 11, prize = 6903 x 2427
+2024-12-13 00:10:50,412 INFO   : Prize with 273 for claw machine: button A = 18 x 24, button B = 71 x 11, prize = 6903 x 2427
+2024-12-13 00:10:50,412 DEBUG  : Prize with 55 As and 6 Bs for 171 tokens on machine button A = 84 x 17, button B = 40 x 53, prize = 4860 x 1253
+2024-12-13 00:10:50,412 INFO   : Prize with 171 for claw machine: button A = 84 x 17, button B = 40 x 53, prize = 4860 x 1253
+2024-12-13 00:10:50,413 INFO   : No prize for claw machine: button A = 74 x 39, button B = 17 x 51, prize = 5051 x 6797
+2024-12-13 00:10:50,415 INFO   : No prize for claw machine: button A = 65 x 18, button B = 24 x 76, prize = 9457 x 8214
+2024-12-13 00:10:50,415 INFO   : No prize for claw machine: button A = 66 x 22, button B = 14 x 43, prize = 810 x 14750
+2024-12-13 00:10:50,415 DEBUG  : Prize with 89 As and 28 Bs for 295 tokens on machine button A = 12 x 82, button B = 93 x 70, prize = 3672 x 9258
+2024-12-13 00:10:50,415 INFO   : Prize with 295 for claw machine: button A = 12 x 82, button B = 93 x 70, prize = 3672 x 9258
+2024-12-13 00:10:50,416 DEBUG  : Prize with 31 As and 57 Bs for 150 tokens on machine button A = 63 x 26, button B = 35 x 56, prize = 3948 x 3998
+2024-12-13 00:10:50,416 INFO   : Prize with 150 for claw machine: button A = 63 x 26, button B = 35 x 56, prize = 3948 x 3998
+2024-12-13 00:10:50,417 DEBUG  : Prize with 40 As and 64 Bs for 184 tokens on machine button A = 51 x 25, button B = 28 x 54, prize = 3832 x 4456
+2024-12-13 00:10:50,417 INFO   : Prize with 184 for claw machine: button A = 51 x 25, button B = 28 x 54, prize = 3832 x 4456
+2024-12-13 00:10:50,418 INFO   : No prize for claw machine: button A = 24 x 62, button B = 67 x 33, prize = 14082 x 8066
+2024-12-13 00:10:50,419 INFO   : No prize for claw machine: button A = 33 x 15, button B = 28 x 54, prize = 4793 x 1049
+2024-12-13 00:10:50,419 INFO   : No prize for claw machine: button A = 58 x 25, button B = 27 x 60, prize = 5684 x 3440
+2024-12-13 00:10:50,421 INFO   : No prize for claw machine: button A = 51 x 27, button B = 12 x 33, prize = 6641 x 12200
+2024-12-13 00:10:50,421 DEBUG  : Prize with 66 As and 93 Bs for 291 tokens on machine button A = 91 x 41, button B = 39 x 93, prize = 9633 x 11355
+2024-12-13 00:10:50,423 INFO   : Prize with 291 for claw machine: button A = 91 x 41, button B = 39 x 93, prize = 9633 x 11355
+2024-12-13 00:10:50,425 INFO   : No prize for claw machine: button A = 16 x 41, button B = 60 x 19, prize = 11624 x 17434
+2024-12-13 00:10:50,426 INFO   : No prize for claw machine: button A = 23 x 62, button B = 70 x 33, prize = 6285 x 5378
+2024-12-13 00:10:50,427 INFO   : No prize for claw machine: button A = 63 x 38, button B = 24 x 52, prize = 18713 x 4086
+2024-12-13 00:10:50,428 DEBUG  : Prize with 28 As and 99 Bs for 183 tokens on machine button A = 92 x 17, button B = 44 x 96, prize = 6932 x 9980
+2024-12-13 00:10:50,428 INFO   : Prize with 183 for claw machine: button A = 92 x 17, button B = 44 x 96, prize = 6932 x 9980
+2024-12-13 00:10:50,428 DEBUG  : Prize with 11 As and 88 Bs for 121 tokens on machine button A = 92 x 99, button B = 99 x 17, prize = 9724 x 2585
+2024-12-13 00:10:50,429 INFO   : Prize with 121 for claw machine: button A = 92 x 99, button B = 99 x 17, prize = 9724 x 2585
+2024-12-13 00:10:50,430 DEBUG  : Prize with 82 As and 60 Bs for 306 tokens on machine button A = 95 x 16, button B = 63 x 62, prize = 11570 x 5032
+2024-12-13 00:10:50,430 INFO   : Prize with 306 for claw machine: button A = 95 x 16, button B = 63 x 62, prize = 11570 x 5032
+2024-12-13 00:10:50,431 DEBUG  : Prize with 96 As and 20 Bs for 308 tokens on machine button A = 49 x 18, button B = 18 x 28, prize = 5064 x 2288
+2024-12-13 00:10:50,431 INFO   : Prize with 308 for claw machine: button A = 49 x 18, button B = 18 x 28, prize = 5064 x 2288
+2024-12-13 00:10:50,432 INFO   : No prize for claw machine: button A = 35 x 77, button B = 53 x 14, prize = 16536 x 13857
+2024-12-13 00:10:50,433 DEBUG  : Prize with 51 As and 92 Bs for 245 tokens on machine button A = 14 x 41, button B = 89 x 71, prize = 8902 x 8623
+2024-12-13 00:10:50,433 INFO   : Prize with 245 for claw machine: button A = 14 x 41, button B = 89 x 71, prize = 8902 x 8623
+2024-12-13 00:10:50,434 INFO   : No prize for claw machine: button A = 49 x 17, button B = 27 x 70, prize = 18325 x 2157
+2024-12-13 00:10:50,435 INFO   : No prize for claw machine: button A = 20 x 57, button B = 54 x 18, prize = 19442 x 3419
+2024-12-13 00:10:50,436 INFO   : No prize for claw machine: button A = 11 x 25, button B = 72 x 42, prize = 8781 x 6799
+2024-12-13 00:10:50,437 INFO   : No prize for claw machine: button A = 20 x 48, button B = 61 x 37, prize = 10609 x 5109
+2024-12-13 00:10:50,437 INFO   : No prize for claw machine: button A = 19 x 45, button B = 42 x 12, prize = 253 x 1835
+2024-12-13 00:10:50,439 INFO   : No prize for claw machine: button A = 15 x 48, button B = 64 x 16, prize = 17517 x 13728
+2024-12-13 00:10:50,440 INFO   : No prize for claw machine: button A = 52 x 13, button B = 25 x 66, prize = 8798 x 10188
+2024-12-13 00:10:50,441 INFO   : No prize for claw machine: button A = 20 x 46, button B = 51 x 30, prize = 12086 x 9494
+2024-12-13 00:10:50,442 INFO   : No prize for claw machine: button A = 21 x 58, button B = 63 x 22, prize = 17063 x 1590
+2024-12-13 00:10:50,442 INFO   : No prize for claw machine: button A = 11 x 39, button B = 75 x 30, prize = 2732 x 8453
+2024-12-13 00:10:50,442 INFO   : No prize for claw machine: button A = 57 x 26, button B = 26 x 47, prize = 16605 x 523
+2024-12-13 00:10:50,443 DEBUG  : Prize with 20 As and 68 Bs for 128 tokens on machine button A = 64 x 21, button B = 18 x 80, prize = 2504 x 5860
+2024-12-13 00:10:50,443 INFO   : Prize with 128 for claw machine: button A = 64 x 21, button B = 18 x 80, prize = 2504 x 5860
+2024-12-13 00:10:50,443 DEBUG  : Prize with 6 As and 73 Bs for 91 tokens on machine button A = 83 x 15, button B = 56 x 57, prize = 4586 x 4251
+2024-12-13 00:10:50,444 INFO   : Prize with 91 for claw machine: button A = 83 x 15, button B = 56 x 57, prize = 4586 x 4251
+2024-12-13 00:10:50,445 INFO   : No prize for claw machine: button A = 33 x 13, button B = 27 x 58, prize = 12359 x 17846
+2024-12-13 00:10:50,446 INFO   : No prize for claw machine: button A = 19 x 39, button B = 59 x 19, prize = 7183 x 19763
+2024-12-13 00:10:50,447 INFO   : No prize for claw machine: button A = 17 x 11, button B = 22 x 49, prize = 9203 x 17789
+2024-12-13 00:10:50,448 DEBUG  : Prize with 68 As and 3 Bs for 207 tokens on machine button A = 28 x 99, button B = 87 x 11, prize = 2165 x 6765
+2024-12-13 00:10:50,448 INFO   : Prize with 207 for claw machine: button A = 28 x 99, button B = 87 x 11, prize = 2165 x 6765
+2024-12-13 00:10:50,449 DEBUG  : Prize with 86 As and 86 Bs for 344 tokens on machine button A = 69 x 28, button B = 52 x 70, prize = 10406 x 8428
+2024-12-13 00:10:50,449 INFO   : Prize with 344 for claw machine: button A = 69 x 28, button B = 52 x 70, prize = 10406 x 8428
+2024-12-13 00:10:50,450 INFO   : No prize for claw machine: button A = 30 x 12, button B = 53 x 76, prize = 13030 x 14808
+2024-12-13 00:10:50,452 INFO   : No prize for claw machine: button A = 17 x 49, button B = 47 x 28, prize = 9223 x 9615
+2024-12-13 00:10:50,452 DEBUG  : Prize with 53 As and 12 Bs for 171 tokens on machine button A = 33 x 34, button B = 76 x 15, prize = 2661 x 1982
+2024-12-13 00:10:50,452 INFO   : Prize with 171 for claw machine: button A = 33 x 34, button B = 76 x 15, prize = 2661 x 1982
+2024-12-13 00:10:50,454 INFO   : No prize for claw machine: button A = 19 x 50, button B = 44 x 15, prize = 8425 x 17470
+2024-12-13 00:10:50,454 DEBUG  : Prize with 40 As and 39 Bs for 159 tokens on machine button A = 80 x 45, button B = 17 x 65, prize = 3863 x 4335
+2024-12-13 00:10:50,454 INFO   : Prize with 159 for claw machine: button A = 80 x 45, button B = 17 x 65, prize = 3863 x 4335
+2024-12-13 00:10:50,455 INFO   : No prize for claw machine: button A = 27 x 16, button B = 14 x 28, prize = 8861 x 17640
+2024-12-13 00:10:50,457 DEBUG  : Prize with 92 As and 41 Bs for 317 tokens on machine button A = 32 x 91, button B = 61 x 52, prize = 5445 x 10504
+2024-12-13 00:10:50,457 INFO   : Prize with 317 for claw machine: button A = 32 x 91, button B = 61 x 52, prize = 5445 x 10504
+2024-12-13 00:10:50,458 INFO   : No prize for claw machine: button A = 13 x 42, button B = 58 x 38, prize = 6888 x 14140
+2024-12-13 00:10:50,458 INFO   : No prize for claw machine: button A = 25 x 61, button B = 40 x 11, prize = 1375 x 16891
+2024-12-13 00:10:50,459 INFO   : No prize for claw machine: button A = 11 x 52, button B = 75 x 29, prize = 4368 x 12074
+2024-12-13 00:10:50,460 INFO   : No prize for claw machine: button A = 22 x 53, button B = 56 x 29, prize = 7670 x 8250
+2024-12-13 00:10:50,462 INFO   : No prize for claw machine: button A = 32 x 11, button B = 32 x 68, prize = 7360 x 16987
+2024-12-13 00:10:50,462 DEBUG  : Prize with 22 As and 96 Bs for 162 tokens on machine button A = 18 x 46, button B = 33 x 16, prize = 3564 x 2548
+2024-12-13 00:10:50,463 INFO   : Prize with 162 for claw machine: button A = 18 x 46, button B = 33 x 16, prize = 3564 x 2548
+2024-12-13 00:10:50,464 INFO   : No prize for claw machine: button A = 11 x 46, button B = 54 x 32, prize = 10843 x 10358
+2024-12-13 00:10:50,465 INFO   : No prize for claw machine: button A = 60 x 83, button B = 32 x 13, prize = 16748 x 18281
+2024-12-13 00:10:50,466 DEBUG  : Prize with 95 As and 39 Bs for 324 tokens on machine button A = 32 x 59, button B = 97 x 19, prize = 6823 x 6346
+2024-12-13 00:10:50,466 INFO   : Prize with 324 for claw machine: button A = 32 x 59, button B = 97 x 19, prize = 6823 x 6346
+2024-12-13 00:10:50,467 DEBUG  : Prize with 73 As and 60 Bs for 279 tokens on machine button A = 96 x 60, button B = 47 x 94, prize = 9828 x 10020
+2024-12-13 00:10:50,467 INFO   : Prize with 279 for claw machine: button A = 96 x 60, button B = 47 x 94, prize = 9828 x 10020
+2024-12-13 00:10:50,468 DEBUG  : Prize with 82 As and 29 Bs for 275 tokens on machine button A = 12 x 72, button B = 81 x 86, prize = 3333 x 8398
+2024-12-13 00:10:50,468 INFO   : Prize with 275 for claw machine: button A = 12 x 72, button B = 81 x 86, prize = 3333 x 8398
+2024-12-13 00:10:50,469 DEBUG  : Prize with 90 As and 32 Bs for 302 tokens on machine button A = 59 x 30, button B = 54 x 97, prize = 7038 x 5804
+2024-12-13 00:10:50,469 INFO   : Prize with 302 for claw machine: button A = 59 x 30, button B = 54 x 97, prize = 7038 x 5804
+2024-12-13 00:10:50,469 INFO   : No prize for claw machine: button A = 21 x 45, button B = 48 x 27, prize = 12056 x 269
+2024-12-13 00:10:50,469 DEBUG  : Prize with 27 As and 62 Bs for 143 tokens on machine button A = 80 x 31, button B = 30 x 82, prize = 4020 x 5921
+2024-12-13 00:10:50,470 INFO   : Prize with 143 for claw machine: button A = 80 x 31, button B = 30 x 82, prize = 4020 x 5921
+2024-12-13 00:10:50,470 DEBUG  : Prize with 74 As and 28 Bs for 250 tokens on machine button A = 80 x 35, button B = 25 x 55, prize = 6620 x 4130
+2024-12-13 00:10:50,470 INFO   : Prize with 250 for claw machine: button A = 80 x 35, button B = 25 x 55, prize = 6620 x 4130
+2024-12-13 00:10:50,472 INFO   : No prize for claw machine: button A = 31 x 18, button B = 13 x 31, prize = 15898 x 6859
+2024-12-13 00:10:50,472 DEBUG  : Prize with 65 As and 31 Bs for 226 tokens on machine button A = 80 x 30, button B = 20 x 43, prize = 5820 x 3283
+2024-12-13 00:10:50,473 INFO   : Prize with 226 for claw machine: button A = 80 x 30, button B = 20 x 43, prize = 5820 x 3283
+2024-12-13 00:10:50,473 INFO   : No prize for claw machine: button A = 13 x 27, button B = 34 x 15, prize = 17252 x 377
+2024-12-13 00:10:50,474 INFO   : No prize for claw machine: button A = 49 x 11, button B = 40 x 76, prize = 16449 x 15823
+2024-12-13 00:10:50,474 DEBUG  : Prize with 75 As and 7 Bs for 232 tokens on machine button A = 92 x 32, button B = 28 x 48, prize = 7096 x 2736
+2024-12-13 00:10:50,475 INFO   : Prize with 232 for claw machine: button A = 92 x 32, button B = 28 x 48, prize = 7096 x 2736
+2024-12-13 00:10:50,476 INFO   : No prize for claw machine: button A = 22 x 76, button B = 54 x 13, prize = 19030 x 18217
+2024-12-13 00:10:50,476 DEBUG  : Prize with 5 As and 12 Bs for 27 tokens on machine button A = 98 x 24, button B = 56 x 62, prize = 1162 x 864
+2024-12-13 00:10:50,476 INFO   : Prize with 27 for claw machine: button A = 98 x 24, button B = 56 x 62, prize = 1162 x 864
+2024-12-13 00:10:50,477 DEBUG  : Prize with 76 As and 28 Bs for 256 tokens on machine button A = 32 x 80, button B = 72 x 45, prize = 4448 x 7340
+2024-12-13 00:10:50,477 INFO   : Prize with 256 for claw machine: button A = 32 x 80, button B = 72 x 45, prize = 4448 x 7340
+2024-12-13 00:10:50,478 INFO   : No prize for claw machine: button A = 45 x 16, button B = 14 x 27, prize = 13215 x 3378
+2024-12-13 00:10:50,479 INFO   : No prize for claw machine: button A = 13 x 25, button B = 34 x 19, prize = 8660 x 3962
+2024-12-13 00:10:50,481 INFO   : No prize for claw machine: button A = 78 x 32, button B = 12 x 61, prize = 14312 x 6693
+2024-12-13 00:10:50,481 DEBUG  : Prize with 69 As and 9 Bs for 216 tokens on machine button A = 17 x 72, button B = 53 x 53, prize = 1650 x 5445
+2024-12-13 00:10:50,481 INFO   : Prize with 216 for claw machine: button A = 17 x 72, button B = 53 x 53, prize = 1650 x 5445
+2024-12-13 00:10:50,482 DEBUG  : Prize with 97 As and 82 Bs for 373 tokens on machine button A = 99 x 51, button B = 12 x 53, prize = 10587 x 9293
+2024-12-13 00:10:50,482 INFO   : Prize with 373 for claw machine: button A = 99 x 51, button B = 12 x 53, prize = 10587 x 9293
+2024-12-13 00:10:50,483 DEBUG  : Prize with 77 As and 68 Bs for 299 tokens on machine button A = 19 x 62, button B = 72 x 52, prize = 6359 x 8310
+2024-12-13 00:10:50,484 INFO   : Prize with 299 for claw machine: button A = 19 x 62, button B = 72 x 52, prize = 6359 x 8310
+2024-12-13 00:10:50,484 INFO   : No prize for claw machine: button A = 75 x 31, button B = 13 x 40, prize = 8828 x 551
+2024-12-13 00:10:50,485 DEBUG  : Prize with 76 As and 49 Bs for 277 tokens on machine button A = 64 x 14, button B = 26 x 42, prize = 6138 x 3122
+2024-12-13 00:10:50,485 INFO   : Prize with 277 for claw machine: button A = 64 x 14, button B = 26 x 42, prize = 6138 x 3122
+2024-12-13 00:10:50,486 DEBUG  : Prize with 45 As and 99 Bs for 234 tokens on machine button A = 23 x 89, button B = 92 x 15, prize = 10143 x 5490
+2024-12-13 00:10:50,486 INFO   : Prize with 234 for claw machine: button A = 23 x 89, button B = 92 x 15, prize = 10143 x 5490
+2024-12-13 00:10:50,486 DEBUG  : Prize with 5 As and 23 Bs for 38 tokens on machine button A = 19 x 45, button B = 71 x 52, prize = 1728 x 1421
+2024-12-13 00:10:50,486 INFO   : Prize with 38 for claw machine: button A = 19 x 45, button B = 71 x 52, prize = 1728 x 1421
+2024-12-13 00:10:50,487 DEBUG  : Prize with 93 As and 51 Bs for 330 tokens on machine button A = 72 x 19, button B = 32 x 62, prize = 8328 x 4929
+2024-12-13 00:10:50,487 INFO   : Prize with 330 for claw machine: button A = 72 x 19, button B = 32 x 62, prize = 8328 x 4929
+2024-12-13 00:10:50,489 INFO   : No prize for claw machine: button A = 15 x 77, button B = 44 x 11, prize = 16875 x 8812
+2024-12-13 00:10:50,489 INFO   : No prize for claw machine: button A = 13 x 66, button B = 82 x 31, prize = 10424 x 874
+2024-12-13 00:10:50,489 DEBUG  : Prize with 10 As and 30 Bs for 60 tokens on machine button A = 53 x 27, button B = 36 x 58, prize = 1610 x 2010
+2024-12-13 00:10:50,489 INFO   : Prize with 60 for claw machine: button A = 53 x 27, button B = 36 x 58, prize = 1610 x 2010
+2024-12-13 00:10:50,490 DEBUG  : Prize with 91 As and 77 Bs for 350 tokens on machine button A = 16 x 82, button B = 71 x 16, prize = 6923 x 8694
+2024-12-13 00:10:50,490 INFO   : Prize with 350 for claw machine: button A = 16 x 82, button B = 71 x 16, prize = 6923 x 8694
+2024-12-13 00:10:50,491 DEBUG  : Prize with 79 As and 77 Bs for 314 tokens on machine button A = 95 x 73, button B = 13 x 61, prize = 8506 x 10464
+2024-12-13 00:10:50,492 INFO   : Prize with 314 for claw machine: button A = 95 x 73, button B = 13 x 61, prize = 8506 x 10464
+2024-12-13 00:10:50,492 DEBUG  : Prize with 47 As and 50 Bs for 191 tokens on machine button A = 78 x 23, button B = 12 x 59, prize = 4266 x 4031
+2024-12-13 00:10:50,492 INFO   : Prize with 191 for claw machine: button A = 78 x 23, button B = 12 x 59, prize = 4266 x 4031
+2024-12-13 00:10:50,492 DEBUG  : Prize with 20 As and 10 Bs for 70 tokens on machine button A = 31 x 87, button B = 71 x 36, prize = 1330 x 2100
+2024-12-13 00:10:50,492 INFO   : Prize with 70 for claw machine: button A = 31 x 87, button B = 71 x 36, prize = 1330 x 2100
+2024-12-13 00:10:50,494 INFO   : No prize for claw machine: button A = 15 x 55, button B = 38 x 13, prize = 16129 x 12049
+2024-12-13 00:10:50,494 INFO   : No prize for claw machine: button A = 74 x 18, button B = 14 x 50, prize = 6380 x 1904
+2024-12-13 00:10:50,495 INFO   : No prize for claw machine: button A = 36 x 19, button B = 13 x 31, prize = 13245 x 15500
+2024-12-13 00:10:50,497 INFO   : No prize for claw machine: button A = 37 x 16, button B = 18 x 33, prize = 13068 x 10692
+2024-12-13 00:10:50,497 DEBUG  : Prize with 77 As and 31 Bs for 262 tokens on machine button A = 56 x 20, button B = 29 x 62, prize = 5211 x 3462
+2024-12-13 00:10:50,497 INFO   : Prize with 262 for claw machine: button A = 56 x 20, button B = 29 x 62, prize = 5211 x 3462
+2024-12-13 00:10:50,497 INFO   : No prize for claw machine: button A = 26 x 59, button B = 45 x 19, prize = 399 x 7100
+2024-12-13 00:10:50,498 INFO   : No prize for claw machine: button A = 52 x 14, button B = 25 x 77, prize = 2490 x 9454
+2024-12-13 00:10:50,498 INFO   : No prize for claw machine: button A = 42 x 11, button B = 20 x 36, prize = 9786 x 1137
+2024-12-13 00:10:50,499 DEBUG  : Prize with 50 As and 71 Bs for 221 tokens on machine button A = 61 x 14, button B = 49 x 93, prize = 6529 x 7303
+2024-12-13 00:10:50,500 INFO   : Prize with 221 for claw machine: button A = 61 x 14, button B = 49 x 93, prize = 6529 x 7303
+2024-12-13 00:10:50,500 INFO   : No prize for claw machine: button A = 27 x 17, button B = 12 x 41, prize = 11438 x 1948
+2024-12-13 00:10:50,501 DEBUG  : Prize with 43 As and 59 Bs for 188 tokens on machine button A = 53 x 11, button B = 54 x 88, prize = 5465 x 5665
+2024-12-13 00:10:50,501 INFO   : Prize with 188 for claw machine: button A = 53 x 11, button B = 54 x 88, prize = 5465 x 5665
+2024-12-13 00:10:50,502 INFO   : No prize for claw machine: button A = 15 x 77, button B = 78 x 18, prize = 4700 x 10332
+2024-12-13 00:10:50,503 INFO   : No prize for claw machine: button A = 11 x 59, button B = 48 x 19, prize = 15210 x 9409
+2024-12-13 00:10:50,505 INFO   : No prize for claw machine: button A = 16 x 52, button B = 41 x 17, prize = 8584 x 11248
+2024-12-13 00:10:50,505 INFO   : No prize for claw machine: button A = 56 x 13, button B = 29 x 68, prize = 2453 x 17869
+2024-12-13 00:10:50,506 DEBUG  : Prize with 62 As and 23 Bs for 209 tokens on machine button A = 35 x 91, button B = 76 x 17, prize = 3918 x 6033
+2024-12-13 00:10:50,506 INFO   : Prize with 209 for claw machine: button A = 35 x 91, button B = 76 x 17, prize = 3918 x 6033
+2024-12-13 00:10:50,507 DEBUG  : Prize with 44 As and 84 Bs for 216 tokens on machine button A = 77 x 57, button B = 21 x 50, prize = 5152 x 6708
+2024-12-13 00:10:50,507 INFO   : Prize with 216 for claw machine: button A = 77 x 57, button B = 21 x 50, prize = 5152 x 6708
+2024-12-13 00:10:50,508 DEBUG  : Prize with 90 As and 60 Bs for 330 tokens on machine button A = 91 x 83, button B = 75 x 12, prize = 12690 x 8190
+2024-12-13 00:10:50,508 INFO   : Prize with 330 for claw machine: button A = 91 x 83, button B = 75 x 12, prize = 12690 x 8190
+2024-12-13 00:10:50,509 INFO   : No prize for claw machine: button A = 14 x 55, button B = 73 x 19, prize = 11601 x 15256
+2024-12-13 00:10:50,510 DEBUG  : Prize with 90 As and 37 Bs for 307 tokens on machine button A = 50 x 22, button B = 15 x 90, prize = 5055 x 5310
+2024-12-13 00:10:50,510 INFO   : Prize with 307 for claw machine: button A = 50 x 22, button B = 15 x 90, prize = 5055 x 5310
+2024-12-13 00:10:50,511 DEBUG  : Prize with 70 As and 32 Bs for 242 tokens on machine button A = 18 x 89, button B = 68 x 44, prize = 3436 x 7638
+2024-12-13 00:10:50,511 INFO   : Prize with 242 for claw machine: button A = 18 x 89, button B = 68 x 44, prize = 3436 x 7638
+2024-12-13 00:10:50,511 DEBUG  : Prize with 19 As and 85 Bs for 142 tokens on machine button A = 39 x 17, button B = 33 x 62, prize = 3546 x 5593
+2024-12-13 00:10:50,512 INFO   : Prize with 142 for claw machine: button A = 39 x 17, button B = 33 x 62, prize = 3546 x 5593
+2024-12-13 00:10:50,513 INFO   : No prize for claw machine: button A = 12 x 37, button B = 69 x 37, prize = 14282 x 9906
+2024-12-13 00:10:50,514 INFO   : No prize for claw machine: button A = 63 x 14, button B = 12 x 59, prize = 13250 x 17592
+2024-12-13 00:10:50,515 INFO   : No prize for claw machine: button A = 36 x 13, button B = 11 x 27, prize = 2067 x 13051
+2024-12-13 00:10:50,516 DEBUG  : Prize with 78 As and 58 Bs for 292 tokens on machine button A = 20 x 41, button B = 66 x 12, prize = 5388 x 3894
+2024-12-13 00:10:50,516 INFO   : Prize with 292 for claw machine: button A = 20 x 41, button B = 66 x 12, prize = 5388 x 3894
+2024-12-13 00:10:50,518 INFO   : No prize for claw machine: button A = 20 x 56, button B = 67 x 13, prize = 19450 x 8218
+2024-12-13 00:10:50,518 DEBUG  : Prize with 3 As and 78 Bs for 87 tokens on machine button A = 78 x 54, button B = 12 x 79, prize = 1170 x 6324
+2024-12-13 00:10:50,518 INFO   : Prize with 87 for claw machine: button A = 78 x 54, button B = 12 x 79, prize = 1170 x 6324
+2024-12-13 00:10:50,518 DEBUG  : Prize with 9 As and 28 Bs for 55 tokens on machine button A = 90 x 18, button B = 85 x 85, prize = 3190 x 2542
+2024-12-13 00:10:50,518 INFO   : Prize with 55 for claw machine: button A = 90 x 18, button B = 85 x 85, prize = 3190 x 2542
+2024-12-13 00:10:50,519 INFO   : No prize for claw machine: button A = 41 x 55, button B = 33 x 11, prize = 4748 x 13212
+2024-12-13 00:10:50,521 INFO   : No prize for claw machine: button A = 14 x 32, button B = 71 x 43, prize = 7996 x 7508
+2024-12-13 00:10:50,522 INFO   : No prize for claw machine: button A = 21 x 62, button B = 29 x 12, prize = 9063 x 14936
+2024-12-13 00:10:50,522 DEBUG  : Prize with 63 As and 14 Bs for 203 tokens on machine button A = 22 x 62, button B = 55 x 16, prize = 2156 x 4130
+2024-12-13 00:10:50,522 INFO   : Prize with 203 for claw machine: button A = 22 x 62, button B = 55 x 16, prize = 2156 x 4130
+2024-12-13 00:10:50,524 DEBUG  : Prize with 99 As and 84 Bs for 381 tokens on machine button A = 59 x 14, button B = 74 x 83, prize = 12057 x 8358
+2024-12-13 00:10:50,524 INFO   : Prize with 381 for claw machine: button A = 59 x 14, button B = 74 x 83, prize = 12057 x 8358
+2024-12-13 00:10:50,524 DEBUG  : Prize with 25 As and 73 Bs for 148 tokens on machine button A = 14 x 37, button B = 76 x 19, prize = 5898 x 2312
+2024-12-13 00:10:50,524 INFO   : Prize with 148 for claw machine: button A = 14 x 37, button B = 76 x 19, prize = 5898 x 2312
+2024-12-13 00:10:50,525 DEBUG  : Prize with 24 As and 19 Bs for 91 tokens on machine button A = 91 x 15, button B = 59 x 69, prize = 3305 x 1671
+2024-12-13 00:10:50,525 INFO   : Prize with 91 for claw machine: button A = 91 x 15, button B = 59 x 69, prize = 3305 x 1671
+2024-12-13 00:10:50,526 INFO   : No prize for claw machine: button A = 15 x 37, button B = 49 x 36, prize = 7184 x 9695
+2024-12-13 00:10:50,526 INFO   : No prize for claw machine: button A = 20 x 41, button B = 43 x 18, prize = 463 x 10089
+2024-12-13 00:10:50,527 DEBUG  : Prize with 70 As and 34 Bs for 244 tokens on machine button A = 94 x 44, button B = 30 x 82, prize = 7600 x 5868
+2024-12-13 00:10:50,527 INFO   : Prize with 244 for claw machine: button A = 94 x 44, button B = 30 x 82, prize = 7600 x 5868
+2024-12-13 00:10:50,527 DEBUG  : Prize with 33 As and 8 Bs for 107 tokens on machine button A = 96 x 13, button B = 32 x 33, prize = 3424 x 693
+2024-12-13 00:10:50,527 INFO   : Prize with 107 for claw machine: button A = 96 x 13, button B = 32 x 33, prize = 3424 x 693
+2024-12-13 00:10:50,528 DEBUG  : Prize with 49 As and 70 Bs for 217 tokens on machine button A = 36 x 68, button B = 79 x 14, prize = 7294 x 4312
+2024-12-13 00:10:50,528 INFO   : Prize with 217 for claw machine: button A = 36 x 68, button B = 79 x 14, prize = 7294 x 4312
+2024-12-13 00:10:50,529 INFO   : No prize for claw machine: button A = 20 x 68, button B = 60 x 23, prize = 8420 x 15573
+2024-12-13 00:10:50,530 INFO   : No prize for claw machine: button A = 27 x 74, button B = 62 x 17, prize = 3968 x 16866
+2024-12-13 00:10:50,531 INFO   : No prize for claw machine: button A = 73 x 29, button B = 17 x 45, prize = 3900 x 5444
+2024-12-13 00:10:50,531 DEBUG  : Prize with 15 As and 8 Bs for 53 tokens on machine button A = 27 x 52, button B = 36 x 12, prize = 693 x 876
+2024-12-13 00:10:50,531 INFO   : Prize with 53 for claw machine: button A = 27 x 52, button B = 36 x 12, prize = 693 x 876
+2024-12-13 00:10:50,532 INFO   : No prize for claw machine: button A = 37 x 18, button B = 31 x 51, prize = 6019 x 18734
+2024-12-13 00:10:50,533 INFO   : No prize for claw machine: button A = 29 x 76, button B = 42 x 13, prize = 11614 x 2906
+2024-12-13 00:10:50,534 INFO   : No prize for claw machine: button A = 14 x 42, button B = 59 x 35, prize = 18349 x 11813
+2024-12-13 00:10:50,535 DEBUG  : Prize with 57 As and 75 Bs for 246 tokens on machine button A = 68 x 48, button B = 39 x 92, prize = 6801 x 9636
+2024-12-13 00:10:50,535 INFO   : Prize with 246 for claw machine: button A = 68 x 48, button B = 39 x 92, prize = 6801 x 9636
+2024-12-13 00:10:50,536 DEBUG  : Prize with 41 As and 80 Bs for 203 tokens on machine button A = 25 x 41, button B = 75 x 35, prize = 7025 x 4481
+2024-12-13 00:10:50,537 INFO   : Prize with 203 for claw machine: button A = 25 x 41, button B = 75 x 35, prize = 7025 x 4481
+2024-12-13 00:10:50,538 INFO   : No prize for claw machine: button A = 64 x 37, button B = 11 x 21, prize = 6001 x 11072
+2024-12-13 00:10:50,539 DEBUG  : Prize with 68 As and 84 Bs for 288 tokens on machine button A = 58 x 26, button B = 28 x 70, prize = 6296 x 7648
+2024-12-13 00:10:50,539 INFO   : Prize with 288 for claw machine: button A = 58 x 26, button B = 28 x 70, prize = 6296 x 7648
+2024-12-13 00:10:50,540 INFO   : No prize for claw machine: button A = 14 x 53, button B = 81 x 42, prize = 6345 x 17070
+2024-12-13 00:10:50,541 INFO   : No prize for claw machine: button A = 14 x 42, button B = 62 x 18, prize = 2166 x 18194
+2024-12-13 00:10:50,541 DEBUG  : Prize with 56 As and 26 Bs for 194 tokens on machine button A = 20 x 75, button B = 48 x 33, prize = 2368 x 5058
+2024-12-13 00:10:50,541 INFO   : Prize with 194 for claw machine: button A = 20 x 75, button B = 48 x 33, prize = 2368 x 5058
+2024-12-13 00:10:50,542 INFO   : No prize for claw machine: button A = 25 x 46, button B = 47 x 19, prize = 13106 x 17558
+2024-12-13 00:10:50,543 DEBUG  : Prize with 53 As and 21 Bs for 180 tokens on machine button A = 44 x 16, button B = 45 x 82, prize = 3277 x 2570
+2024-12-13 00:10:50,543 INFO   : Prize with 180 for claw machine: button A = 44 x 16, button B = 45 x 82, prize = 3277 x 2570
+2024-12-13 00:10:50,543 DEBUG  : Prize with 28 As and 79 Bs for 163 tokens on machine button A = 86 x 30, button B = 21 x 91, prize = 4067 x 8029
+2024-12-13 00:10:50,543 INFO   : Prize with 163 for claw machine: button A = 86 x 30, button B = 21 x 91, prize = 4067 x 8029
+2024-12-13 00:10:50,544 DEBUG  : Prize with 85 As and 20 Bs for 275 tokens on machine button A = 31 x 80, button B = 85 x 38, prize = 4335 x 7560
+2024-12-13 00:10:50,544 INFO   : Prize with 275 for claw machine: button A = 31 x 80, button B = 85 x 38, prize = 4335 x 7560
+2024-12-13 00:10:50,545 INFO   : No prize for claw machine: button A = 61 x 23, button B = 17 x 47, prize = 4852 x 2260
+2024-12-13 00:10:50,545 INFO   : No prize for claw machine: button A = 60 x 15, button B = 21 x 57, prize = 13505 x 1985
+2024-12-13 00:10:50,547 INFO   : No prize for claw machine: button A = 36 x 16, button B = 27 x 43, prize = 16037 x 9885
+2024-12-13 00:10:50,550 INFO   : No prize for claw machine: button A = 46 x 13, button B = 21 x 66, prize = 13369 x 6940
+2024-12-13 00:10:50,551 INFO   : No prize for claw machine: button A = 14 x 45, button B = 26 x 16, prize = 9320 x 13990
+2024-12-13 00:10:50,552 DEBUG  : Prize with 93 As and 76 Bs for 355 tokens on machine button A = 14 x 26, button B = 92 x 25, prize = 8294 x 4318
+2024-12-13 00:10:50,552 INFO   : Prize with 355 for claw machine: button A = 14 x 26, button B = 92 x 25, prize = 8294 x 4318
+2024-12-13 00:10:50,553 INFO   : No prize for claw machine: button A = 53 x 19, button B = 14 x 26, prize = 16384 x 10312
+2024-12-13 00:10:50,553 DEBUG  : Prize with 6 As and 91 Bs for 109 tokens on machine button A = 52 x 75, button B = 63 x 26, prize = 6045 x 2816
+2024-12-13 00:10:50,554 INFO   : Prize with 109 for claw machine: button A = 52 x 75, button B = 63 x 26, prize = 6045 x 2816
+2024-12-13 00:10:50,555 INFO   : No prize for claw machine: button A = 15 x 43, button B = 71 x 23, prize = 16775 x 9495
+2024-12-13 00:10:50,555 DEBUG  : Prize with 79 As and 16 Bs for 253 tokens on machine button A = 69 x 33, button B = 40 x 99, prize = 6091 x 4191
+2024-12-13 00:10:50,556 INFO   : Prize with 253 for claw machine: button A = 69 x 33, button B = 40 x 99, prize = 6091 x 4191
+2024-12-13 00:10:50,556 DEBUG  : Prize with 39 As and 89 Bs for 206 tokens on machine button A = 99 x 32, button B = 36 x 51, prize = 7065 x 5787
+2024-12-13 00:10:50,557 INFO   : Prize with 206 for claw machine: button A = 99 x 32, button B = 36 x 51, prize = 7065 x 5787
+2024-12-13 00:10:50,557 DEBUG  : Prize with 18 As and 29 Bs for 83 tokens on machine button A = 47 x 70, button B = 60 x 26, prize = 2586 x 2014
+2024-12-13 00:10:50,557 INFO   : Prize with 83 for claw machine: button A = 47 x 70, button B = 60 x 26, prize = 2586 x 2014
+2024-12-13 00:10:50,558 DEBUG  : Prize with 66 As and 96 Bs for 294 tokens on machine button A = 91 x 27, button B = 31 x 68, prize = 8982 x 8310
+2024-12-13 00:10:50,558 INFO   : Prize with 294 for claw machine: button A = 91 x 27, button B = 31 x 68, prize = 8982 x 8310
+2024-12-13 00:10:50,558 DEBUG  : Prize with 27 As and 9 Bs for 90 tokens on machine button A = 93 x 45, button B = 32 x 62, prize = 2799 x 1773
+2024-12-13 00:10:50,558 INFO   : Prize with 90 for claw machine: button A = 93 x 45, button B = 32 x 62, prize = 2799 x 1773
+2024-12-13 00:10:50,558 INFO   : No prize for claw machine: button A = 19 x 38, button B = 45 x 13, prize = 13235 x 531
+2024-12-13 00:10:50,559 DEBUG  : Prize with 10 As and 89 Bs for 119 tokens on machine button A = 25 x 44, button B = 59 x 27, prize = 5501 x 2843
+2024-12-13 00:10:50,559 INFO   : Prize with 119 for claw machine: button A = 25 x 44, button B = 59 x 27, prize = 5501 x 2843
+2024-12-13 00:10:50,560 INFO   : No prize for claw machine: button A = 18 x 36, button B = 68 x 43, prize = 2396 x 13667
+2024-12-13 00:10:50,561 INFO   : No prize for claw machine: button A = 67 x 31, button B = 16 x 61, prize = 9339 x 13839
+2024-12-13 00:10:50,562 DEBUG  : Prize with 92 As and 52 Bs for 328 tokens on machine button A = 50 x 18, button B = 59 x 94, prize = 7668 x 6544
+2024-12-13 00:10:50,562 INFO   : Prize with 328 for claw machine: button A = 50 x 18, button B = 59 x 94, prize = 7668 x 6544
+2024-12-13 00:10:50,562 DEBUG  : Prize with 24 As and 93 Bs for 165 tokens on machine button A = 76 x 12, button B = 56 x 66, prize = 7032 x 6426
+2024-12-13 00:10:50,563 INFO   : Prize with 165 for claw machine: button A = 76 x 12, button B = 56 x 66, prize = 7032 x 6426
+2024-12-13 00:10:50,565 INFO   : No prize for claw machine: button A = 14 x 37, button B = 65 x 35, prize = 13499 x 18892
+2024-12-13 00:10:50,566 INFO   : No prize for claw machine: button A = 17 x 35, button B = 21 x 12, prize = 4779 x 16569
+2024-12-13 00:10:50,566 DEBUG  : Prize with 12 As and 49 Bs for 85 tokens on machine button A = 35 x 41, button B = 83 x 16, prize = 4487 x 1276
+2024-12-13 00:10:50,566 INFO   : Prize with 85 for claw machine: button A = 35 x 41, button B = 83 x 16, prize = 4487 x 1276
+2024-12-13 00:10:50,567 DEBUG  : Prize with 57 As and 47 Bs for 218 tokens on machine button A = 39 x 37, button B = 95 x 15, prize = 6688 x 2814
+2024-12-13 00:10:50,567 INFO   : Prize with 218 for claw machine: button A = 39 x 37, button B = 95 x 15, prize = 6688 x 2814
+2024-12-13 00:10:50,568 INFO   : No prize for claw machine: button A = 26 x 55, button B = 35 x 15, prize = 8743 x 6110
+2024-12-13 00:10:50,568 DEBUG  : Prize with 5 As and 34 Bs for 49 tokens on machine button A = 42 x 34, button B = 22 x 75, prize = 958 x 2720
+2024-12-13 00:10:50,568 INFO   : Prize with 49 for claw machine: button A = 42 x 34, button B = 22 x 75, prize = 958 x 2720
+2024-12-13 00:10:50,570 INFO   : No prize for claw machine: button A = 67 x 20, button B = 18 x 60, prize = 14996 x 6200
+2024-12-13 00:10:50,570 INFO   : No prize for claw machine: button A = 13 x 49, button B = 68 x 33, prize = 17288 x 1213
+2024-12-13 00:10:50,571 DEBUG  : Prize with 37 As and 56 Bs for 167 tokens on machine button A = 13 x 56, button B = 67 x 31, prize = 4233 x 3808
+2024-12-13 00:10:50,571 INFO   : Prize with 167 for claw machine: button A = 13 x 56, button B = 67 x 31, prize = 4233 x 3808
+2024-12-13 00:10:50,573 INFO   : No prize for claw machine: button A = 65 x 17, button B = 13 x 45, prize = 7790 x 14958
+2024-12-13 00:10:50,574 INFO   : No prize for claw machine: button A = 42 x 17, button B = 11 x 44, prize = 18067 x 5940
+2024-12-13 00:10:50,575 DEBUG  : Prize with 73 As and 99 Bs for 318 tokens on machine button A = 14 x 40, button B = 49 x 11, prize = 5873 x 4009
+2024-12-13 00:10:50,575 INFO   : Prize with 318 for claw machine: button A = 14 x 40, button B = 49 x 11, prize = 5873 x 4009
+2024-12-13 00:10:50,576 DEBUG  : Prize with 95 As and 94 Bs for 379 tokens on machine button A = 70 x 27, button B = 26 x 42, prize = 9094 x 6513
+2024-12-13 00:10:50,577 INFO   : Prize with 379 for claw machine: button A = 70 x 27, button B = 26 x 42, prize = 9094 x 6513
+2024-12-13 00:10:50,577 INFO   : No prize for claw machine: button A = 58 x 31, button B = 16 x 30, prize = 2210 x 10445
+2024-12-13 00:10:50,578 DEBUG  : Prize with 67 As and 96 Bs for 297 tokens on machine button A = 38 x 79, button B = 80 x 54, prize = 10226 x 10477
+2024-12-13 00:10:50,579 INFO   : Prize with 297 for claw machine: button A = 38 x 79, button B = 80 x 54, prize = 10226 x 10477
+2024-12-13 00:10:50,579 DEBUG  : Prize with 14 As and 13 Bs for 55 tokens on machine button A = 61 x 51, button B = 34 x 96, prize = 1296 x 1962
+2024-12-13 00:10:50,579 INFO   : Prize with 55 for claw machine: button A = 61 x 51, button B = 34 x 96, prize = 1296 x 1962
+2024-12-13 00:10:50,579 DEBUG  : Prize with 15 As and 83 Bs for 128 tokens on machine button A = 66 x 24, button B = 60 x 83, prize = 5970 x 7249
+2024-12-13 00:10:50,580 INFO   : Prize with 128 for claw machine: button A = 66 x 24, button B = 60 x 83, prize = 5970 x 7249
+2024-12-13 00:10:50,581 INFO   : No prize for claw machine: button A = 77 x 33, button B = 15 x 56, prize = 5348 x 10861
+2024-12-13 00:10:50,581 DEBUG  : Prize with 34 As and 28 Bs for 130 tokens on machine button A = 97 x 16, button B = 15 x 75, prize = 3718 x 2644
+2024-12-13 00:10:50,581 INFO   : Prize with 130 for claw machine: button A = 97 x 16, button B = 15 x 75, prize = 3718 x 2644
+2024-12-13 00:10:50,582 INFO   : No prize for claw machine: button A = 18 x 66, button B = 57 x 23, prize = 1331 x 461
+2024-12-13 00:10:50,583 INFO   : No prize for claw machine: button A = 86 x 19, button B = 11 x 68, prize = 11493 x 13480
+2024-12-13 00:10:50,584 DEBUG  : Prize with 56 As and 45 Bs for 213 tokens on machine button A = 58 x 19, button B = 27 x 65, prize = 4463 x 3989
+2024-12-13 00:10:50,584 INFO   : Prize with 213 for claw machine: button A = 58 x 19, button B = 27 x 65, prize = 4463 x 3989
+2024-12-13 00:10:50,585 DEBUG  : Prize with 72 As and 53 Bs for 269 tokens on machine button A = 22 x 99, button B = 58 x 47, prize = 4658 x 9619
+2024-12-13 00:10:50,585 INFO   : Prize with 269 for claw machine: button A = 22 x 99, button B = 58 x 47, prize = 4658 x 9619
+2024-12-13 00:10:50,585 DEBUG  : Prize with 67 As and 13 Bs for 214 tokens on machine button A = 41 x 77, button B = 83 x 15, prize = 3826 x 5354
+2024-12-13 00:10:50,586 INFO   : Prize with 214 for claw machine: button A = 41 x 77, button B = 83 x 15, prize = 3826 x 5354
+2024-12-13 00:10:50,587 DEBUG  : Prize with 77 As and 51 Bs for 282 tokens on machine button A = 61 x 87, button B = 88 x 23, prize = 9185 x 7872
+2024-12-13 00:10:50,587 INFO   : Prize with 282 for claw machine: button A = 61 x 87, button B = 88 x 23, prize = 9185 x 7872
+2024-12-13 00:10:50,587 DEBUG  : Prize with 32 As and 9 Bs for 105 tokens on machine button A = 29 x 85, button B = 92 x 70, prize = 1756 x 3350
+2024-12-13 00:10:50,587 INFO   : Prize with 105 for claw machine: button A = 29 x 85, button B = 92 x 70, prize = 1756 x 3350
+2024-12-13 00:10:50,588 INFO   : No prize for claw machine: button A = 34 x 14, button B = 34 x 53, prize = 9560 x 6383
+2024-12-13 00:10:50,590 INFO   : No prize for claw machine: button A = 58 x 22, button B = 27 x 57, prize = 3229 x 11191
+2024-12-13 00:10:50,591 INFO   : No prize for claw machine: button A = 23 x 11, button B = 24 x 63, prize = 17926 x 17857
+2024-12-13 00:10:50,591 DEBUG  : Prize with 22 As and 7 Bs for 73 tokens on machine button A = 13 x 73, button B = 99 x 22, prize = 979 x 1760
+2024-12-13 00:10:50,591 INFO   : Prize with 73 for claw machine: button A = 13 x 73, button B = 99 x 22, prize = 979 x 1760
+2024-12-13 00:10:50,591 DEBUG  : Prize with 32 As and 17 Bs for 113 tokens on machine button A = 85 x 14, button B = 69 x 68, prize = 3893 x 1604
+2024-12-13 00:10:50,591 INFO   : Prize with 113 for claw machine: button A = 85 x 14, button B = 69 x 68, prize = 3893 x 1604
+2024-12-13 00:10:50,593 INFO   : No prize for claw machine: button A = 35 x 70, button B = 48 x 13, prize = 13198 x 8123
+2024-12-13 00:10:50,594 INFO   : No prize for claw machine: button A = 19 x 48, button B = 41 x 17, prize = 12712 x 4069
+2024-12-13 00:10:50,594 DEBUG  : Prize with 14 As and 16 Bs for 58 tokens on machine button A = 76 x 29, button B = 74 x 98, prize = 2248 x 1974
+2024-12-13 00:10:50,594 INFO   : Prize with 58 for claw machine: button A = 76 x 29, button B = 74 x 98, prize = 2248 x 1974
+2024-12-13 00:10:50,595 DEBUG  : Prize with 78 As and 92 Bs for 326 tokens on machine button A = 18 x 60, button B = 36 x 33, prize = 4716 x 7716
+2024-12-13 00:10:50,596 INFO   : Prize with 326 for claw machine: button A = 18 x 60, button B = 36 x 33, prize = 4716 x 7716
+2024-12-13 00:10:50,597 INFO   : No prize for claw machine: button A = 13 x 38, button B = 35 x 21, prize = 15360 x 18553
+2024-12-13 00:10:50,598 DEBUG  : Prize with 49 As and 83 Bs for 230 tokens on machine button A = 30 x 86, button B = 79 x 47, prize = 8027 x 8115
+2024-12-13 00:10:50,599 INFO   : Prize with 230 for claw machine: button A = 30 x 86, button B = 79 x 47, prize = 8027 x 8115
+2024-12-13 00:10:50,600 INFO   : No prize for claw machine: button A = 29 x 11, button B = 43 x 59, prize = 9067 x 12323
+2024-12-13 00:10:50,600 INFO   : No prize for claw machine: button A = 37 x 12, button B = 13 x 37, prize = 5632 x 200
+2024-12-13 00:10:50,601 DEBUG  : Prize with 61 As and 74 Bs for 257 tokens on machine button A = 83 x 20, button B = 19 x 72, prize = 6469 x 6548
+2024-12-13 00:10:50,601 INFO   : Prize with 257 for claw machine: button A = 83 x 20, button B = 19 x 72, prize = 6469 x 6548
+2024-12-13 00:10:50,602 INFO   : No prize for claw machine: button A = 65 x 20, button B = 21 x 61, prize = 16475 x 4040
+2024-12-13 00:10:50,604 INFO   : No prize for claw machine: button A = 44 x 14, button B = 36 x 78, prize = 5748 x 16506
+2024-12-13 00:10:50,605 INFO   : No prize for claw machine: button A = 30 x 11, button B = 20 x 57, prize = 14450 x 18684
+2024-12-13 00:10:50,606 INFO   : No prize for claw machine: button A = 67 x 19, button B = 22 x 72, prize = 13334 x 18046
+2024-12-13 00:10:50,606 DEBUG  : Prize with 36 As and 33 Bs for 141 tokens on machine button A = 44 x 46, button B = 85 x 16, prize = 4389 x 2184
+2024-12-13 00:10:50,607 INFO   : Prize with 141 for claw machine: button A = 44 x 46, button B = 85 x 16, prize = 4389 x 2184
+2024-12-13 00:10:50,607 INFO   : No prize for claw machine: button A = 61 x 28, button B = 24 x 62, prize = 9152 x 946
+2024-12-13 00:10:50,607 DEBUG  : Prize with 67 As and 69 Bs for 270 tokens on machine button A = 62 x 11, button B = 30 x 63, prize = 6224 x 5084
+2024-12-13 00:10:50,608 INFO   : Prize with 270 for claw machine: button A = 62 x 11, button B = 30 x 63, prize = 6224 x 5084
+2024-12-13 00:10:50,609 INFO   : No prize for claw machine: button A = 60 x 33, button B = 15 x 28, prize = 16985 x 17028
+2024-12-13 00:10:50,609 INFO   : No prize for claw machine: button A = 17 x 45, button B = 45 x 26, prize = 12775 x 255
+2024-12-13 00:10:50,611 INFO   : No prize for claw machine: button A = 32 x 52, button B = 39 x 14, prize = 16202 x 7912
+2024-12-13 00:10:50,611 DEBUG  : Prize with 26 As and 17 Bs for 95 tokens on machine button A = 51 x 11, button B = 90 x 96, prize = 2856 x 1918
+2024-12-13 00:10:50,611 INFO   : Prize with 95 for claw machine: button A = 51 x 11, button B = 90 x 96, prize = 2856 x 1918
+2024-12-13 00:10:50,612 INFO   : No prize for claw machine: button A = 55 x 14, button B = 21 x 59, prize = 7579 x 18566
+2024-12-13 00:10:50,614 INFO   : No prize for claw machine: button A = 20 x 45, button B = 47 x 32, prize = 6786 x 15691
+2024-12-13 00:10:50,614 DEBUG  : Prize with 12 As and 41 Bs for 77 tokens on machine button A = 83 x 59, button B = 11 x 83, prize = 1447 x 4111
+2024-12-13 00:10:50,614 INFO   : Prize with 77 for claw machine: button A = 83 x 59, button B = 11 x 83, prize = 1447 x 4111
+2024-12-13 00:10:50,614 INFO   : No prize for claw machine: button A = 70 x 23, button B = 16 x 59, prize = 14404 x 585
+2024-12-13 00:10:50,614 INFO   : No prize for claw machine: button A = 20 x 50, button B = 55 x 28, prize = 9160 x 1204
+2024-12-13 00:10:50,615 DEBUG  : Prize with 40 As and 39 Bs for 159 tokens on machine button A = 68 x 55, button B = 12 x 42, prize = 3188 x 3838
+2024-12-13 00:10:50,615 INFO   : Prize with 159 for claw machine: button A = 68 x 55, button B = 12 x 42, prize = 3188 x 3838
+2024-12-13 00:10:50,616 DEBUG  : Prize with 73 As and 11 Bs for 230 tokens on machine button A = 69 x 80, button B = 11 x 89, prize = 5158 x 6819
+2024-12-13 00:10:50,616 INFO   : Prize with 230 for claw machine: button A = 69 x 80, button B = 11 x 89, prize = 5158 x 6819
+2024-12-13 00:10:50,617 INFO   : No prize for claw machine: button A = 29 x 61, button B = 55 x 13, prize = 3197 x 8483
+2024-12-13 00:10:50,618 INFO   : No prize for claw machine: button A = 74 x 25, button B = 11 x 56, prize = 12703 x 15991
+2024-12-13 00:10:50,618 DEBUG  : Prize with 14 As and 99 Bs for 141 tokens on machine button A = 60 x 15, button B = 42 x 95, prize = 4998 x 9615
+2024-12-13 00:10:50,619 INFO   : Prize with 141 for claw machine: button A = 60 x 15, button B = 42 x 95, prize = 4998 x 9615
+2024-12-13 00:10:50,620 DEBUG  : Prize with 97 As and 94 Bs for 385 tokens on machine button A = 23 x 32, button B = 87 x 34, prize = 10409 x 6300
+2024-12-13 00:10:50,621 INFO   : Prize with 385 for claw machine: button A = 23 x 32, button B = 87 x 34, prize = 10409 x 6300
+2024-12-13 00:10:50,622 INFO   : No prize for claw machine: button A = 11 x 44, button B = 71 x 24, prize = 13268 x 17872
+2024-12-13 00:10:50,623 DEBUG  : Prize with 51 As and 93 Bs for 246 tokens on machine button A = 13 x 60, button B = 63 x 22, prize = 6522 x 5106
+2024-12-13 00:10:50,623 INFO   : Prize with 246 for claw machine: button A = 13 x 60, button B = 63 x 22, prize = 6522 x 5106
+2024-12-13 00:10:50,624 DEBUG  : Prize with 50 As and 44 Bs for 194 tokens on machine button A = 87 x 32, button B = 11 x 66, prize = 4834 x 4504
+2024-12-13 00:10:50,624 INFO   : Prize with 194 for claw machine: button A = 87 x 32, button B = 11 x 66, prize = 4834 x 4504
+2024-12-13 00:10:50,624 INFO   : No prize for claw machine: button A = 55 x 22, button B = 21 x 52, prize = 11757 x 2214
+2024-12-13 00:10:50,625 INFO   : No prize for claw machine: button A = 28 x 69, button B = 37 x 13, prize = 3138 x 17965
+2024-12-13 00:10:50,626 DEBUG  : Prize with 34 As and 78 Bs for 180 tokens on machine button A = 77 x 13, button B = 19 x 30, prize = 4100 x 2782
+2024-12-13 00:10:50,626 INFO   : Prize with 180 for claw machine: button A = 77 x 13, button B = 19 x 30, prize = 4100 x 2782
+2024-12-13 00:10:50,628 INFO   : No prize for claw machine: button A = 29 x 55, button B = 49 x 27, prize = 17241 x 12611
+2024-12-13 00:10:50,629 DEBUG  : Prize with 56 As and 93 Bs for 261 tokens on machine button A = 23 x 13, button B = 23 x 75, prize = 3427 x 7703
+2024-12-13 00:10:50,629 INFO   : Prize with 261 for claw machine: button A = 23 x 13, button B = 23 x 75, prize = 3427 x 7703
+2024-12-13 00:10:50,629 DEBUG  : Prize with 12 As and 23 Bs for 59 tokens on machine button A = 43 x 32, button B = 17 x 55, prize = 907 x 1649
+2024-12-13 00:10:50,629 INFO   : Prize with 59 for claw machine: button A = 43 x 32, button B = 17 x 55, prize = 907 x 1649
+2024-12-13 00:10:50,630 DEBUG  : Prize with 34 As and 86 Bs for 188 tokens on machine button A = 20 x 71, button B = 65 x 39, prize = 6270 x 5768
+2024-12-13 00:10:50,631 INFO   : Prize with 188 for claw machine: button A = 20 x 71, button B = 65 x 39, prize = 6270 x 5768
+2024-12-13 00:10:50,631 INFO   : No prize for claw machine: button A = 11 x 58, button B = 81 x 17, prize = 330 x 17911
+2024-12-13 00:10:50,631 DEBUG  : Prize with 14 As and 71 Bs for 113 tokens on machine button A = 22 x 31, button B = 54 x 16, prize = 4142 x 1570
+2024-12-13 00:10:50,631 INFO   : Prize with 113 for claw machine: button A = 22 x 31, button B = 54 x 16, prize = 4142 x 1570
+2024-12-13 00:10:50,631 INFO   : No prize for claw machine: button A = 25 x 79, button B = 68 x 12, prize = 19174 x 458
+2024-12-13 00:10:50,633 INFO   : No prize for claw machine: button A = 15 x 55, button B = 47 x 18, prize = 6941 x 19714
+2024-12-13 00:10:50,633 DEBUG  : Prize with 33 As and 59 Bs for 158 tokens on machine button A = 60 x 30, button B = 48 x 77, prize = 4812 x 5533
+2024-12-13 00:10:50,634 INFO   : Prize with 158 for claw machine: button A = 60 x 30, button B = 48 x 77, prize = 4812 x 5533
+2024-12-13 00:10:50,634 DEBUG  : Prize with 30 As and 26 Bs for 116 tokens on machine button A = 71 x 48, button B = 15 x 61, prize = 2520 x 3026
+2024-12-13 00:10:50,634 INFO   : Prize with 116 for claw machine: button A = 71 x 48, button B = 15 x 61, prize = 2520 x 3026
+2024-12-13 00:10:50,635 INFO   : No prize for claw machine: button A = 26 x 12, button B = 18 x 29, prize = 3506 x 16969
+2024-12-13 00:10:50,637 DEBUG  : Prize with 93 As and 81 Bs for 360 tokens on machine button A = 16 x 80, button B = 82 x 39, prize = 8130 x 10599
+2024-12-13 00:10:50,637 INFO   : Prize with 360 for claw machine: button A = 16 x 80, button B = 82 x 39, prize = 8130 x 10599
+2024-12-13 00:10:50,637 DEBUG  : Prize with 9 As and 94 Bs for 121 tokens on machine button A = 32 x 79, button B = 89 x 36, prize = 8654 x 4095
+2024-12-13 00:10:50,637 INFO   : Prize with 121 for claw machine: button A = 32 x 79, button B = 89 x 36, prize = 8654 x 4095
+2024-12-13 00:10:50,638 DEBUG  : Prize with 17 As and 28 Bs for 79 tokens on machine button A = 28 x 75, button B = 85 x 60, prize = 2856 x 2955
+2024-12-13 00:10:50,638 INFO   : Prize with 79 for claw machine: button A = 28 x 75, button B = 85 x 60, prize = 2856 x 2955
+2024-12-13 00:10:50,639 DEBUG  : Prize with 92 As and 33 Bs for 309 tokens on machine button A = 91 x 51, button B = 20 x 68, prize = 9032 x 6936
+2024-12-13 00:10:50,639 INFO   : Prize with 309 for claw machine: button A = 91 x 51, button B = 20 x 68, prize = 9032 x 6936
+2024-12-13 00:10:50,641 INFO   : No prize for claw machine: button A = 36 x 80, button B = 43 x 12, prize = 14547 x 14252
+2024-12-13 00:10:50,641 DEBUG  : Prize with 14 As and 61 Bs for 103 tokens on machine button A = 95 x 16, button B = 25 x 23, prize = 2855 x 1627
+2024-12-13 00:10:50,641 INFO   : Prize with 103 for claw machine: button A = 95 x 16, button B = 25 x 23, prize = 2855 x 1627
+2024-12-13 00:10:50,641 DEBUG  : Prize with 27 As and 18 Bs for 99 tokens on machine button A = 46 x 23, button B = 49 x 93, prize = 2124 x 2295
+2024-12-13 00:10:50,641 INFO   : Prize with 99 for claw machine: button A = 46 x 23, button B = 49 x 93, prize = 2124 x 2295
+2024-12-13 00:10:50,643 INFO   : No prize for claw machine: button A = 27 x 84, button B = 53 x 11, prize = 10279 x 17893
+2024-12-13 00:10:50,643 INFO   : No prize for claw machine: button A = 19 x 55, button B = 42 x 23, prize = 12761 x 2299
+2024-12-13 00:10:50,643 DEBUG  : Prize with 25 As and 4 Bs for 79 tokens on machine button A = 50 x 66, button B = 75 x 30, prize = 1550 x 1770
+2024-12-13 00:10:50,644 INFO   : Prize with 79 for claw machine: button A = 50 x 66, button B = 75 x 30, prize = 1550 x 1770
+2024-12-13 00:10:50,644 DEBUG  : Prize with 28 As and 38 Bs for 122 tokens on machine button A = 27 x 95, button B = 85 x 17, prize = 3986 x 3306
+2024-12-13 00:10:50,644 INFO   : Prize with 122 for claw machine: button A = 27 x 95, button B = 85 x 17, prize = 3986 x 3306
+2024-12-13 00:10:50,645 DEBUG  : Prize with 77 As and 39 Bs for 270 tokens on machine button A = 95 x 49, button B = 19 x 85, prize = 8056 x 7088
+2024-12-13 00:10:50,645 INFO   : Prize with 270 for claw machine: button A = 95 x 49, button B = 19 x 85, prize = 8056 x 7088
+2024-12-13 00:10:50,645 DEBUG  : Prize with 22 As and 22 Bs for 88 tokens on machine button A = 49 x 68, button B = 88 x 34, prize = 3014 x 2244
+2024-12-13 00:10:50,645 INFO   : Prize with 88 for claw machine: button A = 49 x 68, button B = 88 x 34, prize = 3014 x 2244
+2024-12-13 00:10:50,646 INFO   : No prize for claw machine: button A = 46 x 30, button B = 17 x 41, prize = 13436 x 18172
+2024-12-13 00:10:50,647 DEBUG  : Prize with 72 As and 26 Bs for 242 tokens on machine button A = 69 x 28, button B = 23 x 60, prize = 5566 x 3576
+2024-12-13 00:10:50,647 INFO   : Prize with 242 for claw machine: button A = 69 x 28, button B = 23 x 60, prize = 5566 x 3576
+2024-12-13 00:10:50,648 DEBUG  : Prize with 72 As and 89 Bs for 305 tokens on machine button A = 44 x 54, button B = 12 x 82, prize = 4236 x 11186
+2024-12-13 00:10:50,648 INFO   : Prize with 305 for claw machine: button A = 44 x 54, button B = 12 x 82, prize = 4236 x 11186
+2024-12-13 00:10:50,650 INFO   : No prize for claw machine: button A = 11 x 64, button B = 79 x 24, prize = 13813 x 11296
+2024-12-13 00:10:50,650 DEBUG  : Prize with 25 As and 15 Bs for 90 tokens on machine button A = 68 x 68, button B = 13 x 93, prize = 1895 x 3095
+2024-12-13 00:10:50,650 INFO   : Prize with 90 for claw machine: button A = 68 x 68, button B = 13 x 93, prize = 1895 x 3095
+2024-12-13 00:10:50,650 INFO   : No prize for claw machine: button A = 45 x 17, button B = 44 x 77, prize = 284 x 19673
+2024-12-13 00:10:50,651 DEBUG  : Prize with 30 As and 90 Bs for 180 tokens on machine button A = 68 x 14, button B = 67 x 78, prize = 8070 x 7440
+2024-12-13 00:10:50,651 INFO   : Prize with 180 for claw machine: button A = 68 x 14, button B = 67 x 78, prize = 8070 x 7440
+2024-12-13 00:10:50,652 DEBUG  : Prize with 5 As and 74 Bs for 89 tokens on machine button A = 73 x 11, button B = 21 x 95, prize = 1919 x 7085
+2024-12-13 00:10:50,652 INFO   : Prize with 89 for claw machine: button A = 73 x 11, button B = 21 x 95, prize = 1919 x 7085
+2024-12-13 00:10:50,652 DEBUG  : Prize with 46 As and 11 Bs for 149 tokens on machine button A = 26 x 72, button B = 97 x 35, prize = 2263 x 3697
+2024-12-13 00:10:50,652 INFO   : Prize with 149 for claw machine: button A = 26 x 72, button B = 97 x 35, prize = 2263 x 3697
+2024-12-13 00:10:50,653 INFO   : No prize for claw machine: button A = 33 x 13, button B = 36 x 51, prize = 17687 x 14407
+2024-12-13 00:10:50,655 INFO   : No prize for claw machine: button A = 62 x 35, button B = 31 x 60, prize = 15832 x 16295
+2024-12-13 00:10:50,656 DEBUG  : Prize with 86 As and 85 Bs for 343 tokens on machine button A = 62 x 29, button B = 36 x 89, prize = 8392 x 10059
+2024-12-13 00:10:50,656 INFO   : Prize with 343 for claw machine: button A = 62 x 29, button B = 36 x 89, prize = 8392 x 10059
+2024-12-13 00:10:50,657 DEBUG  : Prize with 39 As and 82 Bs for 199 tokens on machine button A = 55 x 28, button B = 48 x 91, prize = 6081 x 8554
+2024-12-13 00:10:50,658 INFO   : Prize with 199 for claw machine: button A = 55 x 28, button B = 48 x 91, prize = 6081 x 8554
+2024-12-13 00:10:50,658 DEBUG  : Prize with 71 As and 17 Bs for 230 tokens on machine button A = 13 x 34, button B = 84 x 42, prize = 2351 x 3128
+2024-12-13 00:10:50,658 INFO   : Prize with 230 for claw machine: button A = 13 x 34, button B = 84 x 42, prize = 2351 x 3128
+2024-12-13 00:10:50,660 INFO   : No prize for claw machine: button A = 14 x 31, button B = 47 x 30, prize = 13965 x 6961
+2024-12-13 00:10:50,661 DEBUG  : Prize with 71 As and 87 Bs for 300 tokens on machine button A = 88 x 74, button B = 15 x 63, prize = 7553 x 10735
+2024-12-13 00:10:50,662 INFO   : Prize with 300 for claw machine: button A = 88 x 74, button B = 15 x 63, prize = 7553 x 10735
+2024-12-13 00:10:50,663 DEBUG  : Prize with 94 As and 94 Bs for 376 tokens on machine button A = 70 x 20, button B = 55 x 77, prize = 11750 x 9118
+2024-12-13 00:10:50,663 INFO   : Prize with 376 for claw machine: button A = 70 x 20, button B = 55 x 77, prize = 11750 x 9118
+2024-12-13 00:10:50,664 INFO   : No prize for claw machine: button A = 43 x 61, button B = 35 x 15, prize = 5417 x 8049
+2024-12-13 00:10:50,665 DEBUG  : Prize with 79 As and 27 Bs for 264 tokens on machine button A = 46 x 25, button B = 28 x 52, prize = 4390 x 3379
+2024-12-13 00:10:50,665 INFO   : Prize with 264 for claw machine: button A = 46 x 25, button B = 28 x 52, prize = 4390 x 3379
+2024-12-13 00:10:50,666 DEBUG  : Prize with 51 As and 15 Bs for 168 tokens on machine button A = 25 x 57, button B = 50 x 13, prize = 2025 x 3102
+2024-12-13 00:10:50,666 INFO   : Prize with 168 for claw machine: button A = 25 x 57, button B = 50 x 13, prize = 2025 x 3102
+2024-12-13 00:10:50,666 INFO   : No prize for claw machine: button A = 62 x 13, button B = 24 x 64, prize = 1698 x 1023
+2024-12-13 00:10:50,667 INFO   : No prize for claw machine: button A = 16 x 71, button B = 61 x 19, prize = 5497 x 4908
+2024-12-13 00:10:50,668 DEBUG  : Prize with 98 As and 49 Bs for 343 tokens on machine button A = 23 x 97, button B = 35 x 20, prize = 3969 x 10486
+2024-12-13 00:10:50,668 INFO   : Prize with 343 for claw machine: button A = 23 x 97, button B = 35 x 20, prize = 3969 x 10486
+2024-12-13 00:10:50,668 DEBUG  : Prize with 42 As and 16 Bs for 142 tokens on machine button A = 96 x 24, button B = 71 x 71, prize = 5168 x 2144
+2024-12-13 00:10:50,668 INFO   : Prize with 142 for claw machine: button A = 96 x 24, button B = 71 x 71, prize = 5168 x 2144
+2024-12-13 00:10:50,670 INFO   : No prize for claw machine: button A = 44 x 73, button B = 33 x 11, prize = 15511 x 6412
+2024-12-13 00:10:50,670 INFO   : No prize for claw machine: button A = 42 x 23, button B = 17 x 40, prize = 1178 x 2018
+2024-12-13 00:10:50,671 DEBUG  : Prize with 72 As and 85 Bs for 301 tokens on machine button A = 44 x 95, button B = 47 x 32, prize = 7163 x 9560
+2024-12-13 00:10:50,671 INFO   : Prize with 301 for claw machine: button A = 44 x 95, button B = 47 x 32, prize = 7163 x 9560
+2024-12-13 00:10:50,671 INFO   : Can spend 31552 tokens to get 155 prizes from 320 machines
+2024-12-13 00:10:50,671 INFO   : Completed successfully
+$
