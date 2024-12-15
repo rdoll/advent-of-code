@@ -20,3 +20,4 @@ Home: https://adventofcode.com
 * [Day 12](2024/Day%2012/README.md) both parts solved
 * [Day 13](2024/Day%2013/README.md) both parts solved
 * [Day 14](2024/Day%2014/README.md) both parts solved
+* [Day 15](2024/Day%2015/README.md) both parts solved
