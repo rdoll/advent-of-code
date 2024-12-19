@@ -29,7 +29,7 @@ class Trail:
         self.path: set[tuple[int, int]] = path if path else set()
 
     def __eq__(self, other):
-        return self.path == other.path
+        return self.path == other.visited
 
     def __hash__(self):
         return functools.reduce(lambda x, y: x + y, [hash(pos) for pos in self.path])
