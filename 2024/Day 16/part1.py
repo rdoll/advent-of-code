@@ -24,20 +24,36 @@ def parse_args() -> argparse.Namespace:
 
 
 class Path:
-    def __init__(self):
+    def __init__(self, pos3: tuple[int, int, str] = None, cost: int = None):
         self.score: int = 0
         self.path: dict[tuple[int, int, str], int] = {}  # used as an ordered set
+        if pos3 is not None and cost is not None:
+            self.add(pos3, cost)
 
     def __str__(self):
-        return f'score={self.score}, path={self.path}'
+        return f'score={self.score}, steps={len(self.path)}, path={self.path}'
 
     def would_loop(self, pos3: tuple[int, int, str]) -> bool:
         return pos3 in self.path
 
     def add(self, pos3: tuple[int, int, str], cost: int):
         assert pos3 not in self.path, f'Cannot add loop {pos3} to path {self.path}'
-        self.path[pos3] = 0
+        self.path[pos3] = cost
         self.score += cost
+
+    @staticmethod
+    def concat(first: Self, second: Self = None, pos3: tuple[int, int, str] = None, cost: int = None) -> Self:
+        path: Path = Path()
+        for p, c in first.path.items():
+            path.add(p, c)
+        if second is not None:
+            for p, c in second.path.items():
+                path.add(p, c)
+        elif pos3 is not None and cost is not None:
+            path.add(pos3, cost)
+        else:
+            raise RuntimeError(f'Path.concat missing required arguments')
+        return path
 
 
 class Maze:
@@ -83,6 +99,9 @@ class Maze:
         self.print_grid(level=level, grid=grid)
 
     def find_landmarks(self):
+        self.start_pos3 = None
+        self.end_pos = None
+
         for r in range(self.rows):
             for c in range(self.cols):
                 if self.grid[r][c] == self.START:
@@ -91,6 +110,9 @@ class Maze:
                 if self.grid[r][c] == self.END:
                     assert self.end_pos is None, f'Two ends!'
                     self.end_pos = (r, c)
+
+        assert self.start_pos3 is not None, f'No start!'
+        assert self.end_pos is not None, f'No end!'
 
     def load_input(self, input_file):
         for line in input_file:
@@ -104,7 +126,7 @@ class Maze:
 
         self.find_landmarks()
 
-    def move(self, pos3: tuple[int, int, str], cost: int, path: Path, depth: int) -> Path | None:
+    def move(self, pos3: tuple[int, int, str], cost: int, prior_path: Path, depth: int) -> Path | None:
         if pos3 in self.path_cache:
             return self.path_cache[pos3]
 
@@ -115,55 +137,56 @@ class Maze:
         # check if move rejected
         if cell == self.WALL:
             return None
-        if path.would_loop(pos3):
-            logging.debug(f'Would loop {pos3} for {path}')
+        if prior_path.would_loop(pos3):
+            logging.debug(f'Would loop {pos3} for {prior_path}')
             return None
 
-        # move accepted
-        path.add(pos3, cost)
+        # move to here accepted
+        this_cell_path: Path = Path(pos3, cost)
         if cell == self.END:
             logging.debug(f'Reached end {pos3}')
-            return path
+            return this_cell_path
+        here_path: Path = Path.concat(prior_path, pos3=pos3, cost=cost)
 
-        # next move forward
+        # move forward
         fwd_facing: str = pos3[2]
         fwd_map: dict[str, tuple[int, int] | str] = self.FACING_MAP[fwd_facing]
         fwd_offset: tuple[int, int] = fwd_map['offset']
         fwd_pos3: tuple[int, int, str] = (pos3[0] + fwd_offset[0], pos3[1] + fwd_offset[1], fwd_facing)
-        fwd_path: Path = copy.deepcopy(path)
-        fwd_result: Path | None = self.move(fwd_pos3, self.MOVE_COST, fwd_path, depth + 1)
-        # assert fwd_pos3 not in self.path_cache, f'Already have {fwd_pos3} in path cache'
-        self.path_cache[fwd_pos3] = fwd_result
+        fwd_result: Path | None = self.move(fwd_pos3, self.MOVE_COST, here_path, depth + 1)
+        if (fwd_pos3 not in self.path_cache or self.path_cache[fwd_pos3] is None
+                or (fwd_result is not None and fwd_result.score < self.path_cache[fwd_pos3].score)):
+            self.path_cache[fwd_pos3] = fwd_result
 
-        # next turn counterclockwise then move forward
+        # turn counterclockwise then move forward
         ccw_facing: str = fwd_map['ccw']
         ccw_map: dict[str, tuple[int, int] | str] = self.FACING_MAP[ccw_facing]
         ccw_offset: tuple[int, int] = ccw_map['offset']
         ccw_pos3: tuple[int, int, str] = (pos3[0] + ccw_offset[0], pos3[1] + ccw_offset[1], ccw_facing)
-        ccw_path: Path = copy.deepcopy(path)
-        ccw_result: Path | None = self.move(ccw_pos3, self.TURN_COST + self.MOVE_COST, ccw_path, depth + 1)
-        # assert ccw_pos3 not in self.path_cache, f'Already have {ccw_pos3} in path cache'
-        self.path_cache[ccw_pos3] = ccw_result
+        ccw_result: Path | None = self.move(ccw_pos3, self.TURN_COST + self.MOVE_COST, here_path, depth + 1)
+        if (ccw_pos3 not in self.path_cache or self.path_cache[ccw_pos3] is None
+                or (ccw_result is not None and ccw_result.score < self.path_cache[ccw_pos3].score)):
+            self.path_cache[ccw_pos3] = ccw_result
 
-        # next turn clockwise then move forward
+        # turn clockwise then move forward
         cw_facing: str = fwd_map['cw']
         cw_map: dict[str, tuple[int, int] | str] = self.FACING_MAP[cw_facing]
         cw_offset: tuple[int, int] = cw_map['offset']
         cw_pos3: tuple[int, int, str] = (pos3[0] + cw_offset[0], pos3[1] + cw_offset[1], cw_facing)
-        cw_path: Path = copy.deepcopy(path)
-        cw_result: Path | None = self.move(cw_pos3, self.TURN_COST + self.MOVE_COST, cw_path, depth + 1)
-        # assert cw_pos3 not in self.path_cache, f'Already have {cw_pos3} in path cache'
-        self.path_cache[cw_pos3] = cw_result
+        cw_result: Path | None = self.move(cw_pos3, self.TURN_COST + self.MOVE_COST, here_path, depth + 1)
+        if (cw_pos3 not in self.path_cache or self.path_cache[cw_pos3] is None
+                or (cw_result is not None and cw_result.score < self.path_cache[cw_pos3].score)):
+            self.path_cache[cw_pos3] = cw_result
 
         min_score: int = min(fwd_result.score if fwd_result is not None else 10**20,
                              ccw_result.score if ccw_result is not None else 10**20,
                              cw_result.score if cw_result is not None else 10**20)
         if fwd_result is not None and fwd_result.score == min_score:
-            return fwd_result
+            return Path.concat(this_cell_path, fwd_result)
         if ccw_result is not None and ccw_result.score == min_score:
-            return ccw_result
+            return Path.concat(this_cell_path, ccw_result)
         if cw_result is not None and cw_result.score == min_score:
-            return cw_result
+            return Path.concat(this_cell_path, cw_result)
         return None
 
     def find_path(self) -> Path:
