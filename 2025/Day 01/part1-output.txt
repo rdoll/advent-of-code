@@ -1,0 +1,6 @@
+$ ./part1.py input.txt
+2024-12-15 03:55:44,417 INFO   : warehouse = dim=50 x 50, num moves=20000, robot_pos=(24, 24)
+2024-12-15 03:55:44,416 INFO   : Starting ./part1.py to read input.txt...
+...
+2024-12-15 03:55:45,351 INFO   : Completed successfully
+$
