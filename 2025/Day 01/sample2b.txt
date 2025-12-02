@@ -1,0 +1,21 @@
+; answer = 15
+L68
+L30
+R48
+L5
+R60
+L55
+L1
+L99
+R14
+L82
+; added lines to sample2a for testing
+L32
+L100
+R100
+L200
+R200
+L1
+R1
+L1
+R2

@@ -1,4 +1,4 @@
-; answer = 3
+; answer = 6
 L68
 L30
 R48
