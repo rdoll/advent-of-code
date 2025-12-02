@@ -1,0 +1,41 @@
+$ python ./part2.py input.txt
+2025-12-02 12:52:51,487 INFO   : Starting ./part2.py to read input.txt...
+2025-12-02 12:52:51,892 INFO   : Range 492410748-492568208 invalid_count=1 invalid_total=492492492
+2025-12-02 12:52:51,892 INFO   : Range 246-390 invalid_count=1 invalid_total=333
+2025-12-02 12:52:51,892 INFO   : Range 49-90 invalid_count=4 invalid_total=286
+2025-12-02 12:52:51,892 INFO   : Range 16-33 invalid_count=2 invalid_total=55
+2025-12-02 12:52:52,184 INFO   : Range 142410-276301 invalid_count=146 invalid_total=30636424
+2025-12-02 12:52:52,253 INFO   : Range 54304-107961 invalid_count=14 invalid_total=1318723
+2025-12-02 12:52:52,263 INFO   : Range 12792-24543 invalid_count=1 invalid_total=22222
+2025-12-02 12:52:52,784 INFO   : Range 3434259704-3434457648 invalid_count=3 invalid_total=10303112121
+2025-12-02 12:52:52,864 INFO   : Range 848156-886303 invalid_count=42 invalid_total=36414469
+2025-12-02 12:52:52,864 INFO   : Range 152-223 invalid_count=1 invalid_total=222
+2025-12-02 12:52:52,865 INFO   : Range 1303-1870 invalid_count=6 invalid_total=9393
+2025-12-02 12:52:52,983 INFO   : Range 8400386-8519049 invalid_count=0 invalid_total=0
+2025-12-02 12:52:53,153 INFO   : Range 89742532-89811632 invalid_count=7 invalid_total=628452839
+2025-12-02 12:52:53,222 INFO   : Range 535853-567216 invalid_count=33 invalid_total=18209191
+2025-12-02 12:52:53,338 INFO   : Range 6608885-6724046 invalid_count=1 invalid_total=6666666
+2025-12-02 12:52:53,855 INFO   : Range 1985013826-1985207678 invalid_count=2 invalid_total=3970139701
+2025-12-02 12:52:54,184 INFO   : Range 585591-731454 invalid_count=159 invalid_total=104687219
+2025-12-02 12:52:54,184 INFO   : Range 1-13 invalid_count=1 invalid_total=11
+2025-12-02 12:52:54,586 INFO   : Range 12067202-12233567 invalid_count=17 invalid_total=206570655
+2025-12-02 12:52:54,591 INFO   : Range 6533-10235 invalid_count=35 invalid_total=289870
+2025-12-02 12:52:54,666 INFO   : Range 6259999-6321337 invalid_count=0 invalid_total=0
+2025-12-02 12:52:54,834 INFO   : Range 908315-972306 invalid_count=71 invalid_total=66763879
+2025-12-02 12:52:54,834 INFO   : Range 831-1296 invalid_count=5 invalid_total=5220
+2025-12-02 12:52:54,835 INFO   : Range 406-824 invalid_count=4 invalid_total=2442
+2025-12-02 12:52:54,867 INFO   : Range 769293-785465 invalid_count=16 invalid_total=12436424
+2025-12-02 12:52:54,870 INFO   : Range 3862-5652 invalid_count=17 invalid_total=80699
+2025-12-02 12:52:54,887 INFO   : Range 26439-45395 invalid_count=2 invalid_total=77777
+2025-12-02 12:52:54,887 INFO   : Range 95-136 invalid_count=2 invalid_total=210
+2025-12-02 12:52:55,011 INFO   : Range 747698990-747770821 invalid_count=1 invalid_total=747747747
+2025-12-02 12:52:55,065 INFO   : Range 984992-1022864 invalid_count=16 invalid_total=15884778
+2025-12-02 12:52:55,065 INFO   : Range 34-47 invalid_count=1 invalid_total=44
+2025-12-02 12:52:55,294 INFO   : Range 360832-469125 invalid_count=118 invalid_total=48921873
+2025-12-02 12:52:55,411 INFO   : Range 277865-333851 invalid_count=61 invalid_total=18640258
+2025-12-02 12:52:55,412 INFO   : Range 2281-3344 invalid_count=11 invalid_total=31108
+2025-12-02 12:52:55,526 INFO   : Range 2841977-2953689 invalid_count=0 invalid_total=0
+2025-12-02 12:52:55,970 INFO   : Range 29330524-29523460 invalid_count=20 invalid_total=588558850
+2025-12-02 12:52:55,970 INFO   : Final total=17298174201
+2025-12-02 12:52:55,970 INFO   : Completed successfully
+$
