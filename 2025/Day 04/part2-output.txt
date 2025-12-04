@@ -1,0 +1,147 @@
+$ python ./part2.py input.txt
+2025-12-04 12:50:16,172 INFO   : Starting ./part2.py to read input.txt...
+2025-12-04 12:50:16,173 INFO   : Begin iteration=1, total=0
+2025-12-04 12:50:16,194 INFO   : End   iteration=1, removed=1351, total=1351
+2025-12-04 12:50:16,195 INFO   : Begin iteration=2, total=1351
+2025-12-04 12:50:16,227 INFO   : End   iteration=2, removed=1085, total=2436
+2025-12-04 12:50:16,227 INFO   : Begin iteration=3, total=2436
+2025-12-04 12:50:16,245 INFO   : End   iteration=3, removed=823, total=3259
+2025-12-04 12:50:16,246 INFO   : Begin iteration=4, total=3259
+2025-12-04 12:50:16,260 INFO   : End   iteration=4, removed=630, total=3889
+2025-12-04 12:50:16,260 INFO   : Begin iteration=5, total=3889
+2025-12-04 12:50:16,274 INFO   : End   iteration=5, removed=506, total=4395
+2025-12-04 12:50:16,274 INFO   : Begin iteration=6, total=4395
+2025-12-04 12:50:16,288 INFO   : End   iteration=6, removed=448, total=4843
+2025-12-04 12:50:16,288 INFO   : Begin iteration=7, total=4843
+2025-12-04 12:50:16,300 INFO   : End   iteration=7, removed=381, total=5224
+2025-12-04 12:50:16,300 INFO   : Begin iteration=8, total=5224
+2025-12-04 12:50:16,313 INFO   : End   iteration=8, removed=337, total=5561
+2025-12-04 12:50:16,313 INFO   : Begin iteration=9, total=5561
+2025-12-04 12:50:16,325 INFO   : End   iteration=9, removed=274, total=5835
+2025-12-04 12:50:16,325 INFO   : Begin iteration=10, total=5835
+2025-12-04 12:50:16,337 INFO   : End   iteration=10, removed=240, total=6075
+2025-12-04 12:50:16,337 INFO   : Begin iteration=11, total=6075
+2025-12-04 12:50:16,348 INFO   : End   iteration=11, removed=211, total=6286
+2025-12-04 12:50:16,348 INFO   : Begin iteration=12, total=6286
+2025-12-04 12:50:16,359 INFO   : End   iteration=12, removed=191, total=6477
+2025-12-04 12:50:16,359 INFO   : Begin iteration=13, total=6477
+2025-12-04 12:50:16,370 INFO   : End   iteration=13, removed=169, total=6646
+2025-12-04 12:50:16,370 INFO   : Begin iteration=14, total=6646
+2025-12-04 12:50:16,380 INFO   : End   iteration=14, removed=163, total=6809
+2025-12-04 12:50:16,380 INFO   : Begin iteration=15, total=6809
+2025-12-04 12:50:16,390 INFO   : End   iteration=15, removed=141, total=6950
+2025-12-04 12:50:16,390 INFO   : Begin iteration=16, total=6950
+2025-12-04 12:50:16,401 INFO   : End   iteration=16, removed=128, total=7078
+2025-12-04 12:50:16,401 INFO   : Begin iteration=17, total=7078
+2025-12-04 12:50:16,410 INFO   : End   iteration=17, removed=111, total=7189
+2025-12-04 12:50:16,410 INFO   : Begin iteration=18, total=7189
+2025-12-04 12:50:16,420 INFO   : End   iteration=18, removed=97, total=7286
+2025-12-04 12:50:16,420 INFO   : Begin iteration=19, total=7286
+2025-12-04 12:50:16,430 INFO   : End   iteration=19, removed=83, total=7369
+2025-12-04 12:50:16,430 INFO   : Begin iteration=20, total=7369
+2025-12-04 12:50:16,439 INFO   : End   iteration=20, removed=75, total=7444
+2025-12-04 12:50:16,439 INFO   : Begin iteration=21, total=7444
+2025-12-04 12:50:16,449 INFO   : End   iteration=21, removed=71, total=7515
+2025-12-04 12:50:16,449 INFO   : Begin iteration=22, total=7515
+2025-12-04 12:50:16,459 INFO   : End   iteration=22, removed=69, total=7584
+2025-12-04 12:50:16,459 INFO   : Begin iteration=23, total=7584
+2025-12-04 12:50:16,468 INFO   : End   iteration=23, removed=67, total=7651
+2025-12-04 12:50:16,468 INFO   : Begin iteration=24, total=7651
+2025-12-04 12:50:16,477 INFO   : End   iteration=24, removed=63, total=7714
+2025-12-04 12:50:16,477 INFO   : Begin iteration=25, total=7714
+2025-12-04 12:50:16,486 INFO   : End   iteration=25, removed=63, total=7777
+2025-12-04 12:50:16,486 INFO   : Begin iteration=26, total=7777
+2025-12-04 12:50:16,495 INFO   : End   iteration=26, removed=50, total=7827
+2025-12-04 12:50:16,495 INFO   : Begin iteration=27, total=7827
+2025-12-04 12:50:16,504 INFO   : End   iteration=27, removed=42, total=7869
+2025-12-04 12:50:16,504 INFO   : Begin iteration=28, total=7869
+2025-12-04 12:50:16,512 INFO   : End   iteration=28, removed=41, total=7910
+2025-12-04 12:50:16,513 INFO   : Begin iteration=29, total=7910
+2025-12-04 12:50:16,521 INFO   : End   iteration=29, removed=39, total=7949
+2025-12-04 12:50:16,521 INFO   : Begin iteration=30, total=7949
+2025-12-04 12:50:16,530 INFO   : End   iteration=30, removed=29, total=7978
+2025-12-04 12:50:16,530 INFO   : Begin iteration=31, total=7978
+2025-12-04 12:50:16,538 INFO   : End   iteration=31, removed=32, total=8010
+2025-12-04 12:50:16,538 INFO   : Begin iteration=32, total=8010
+2025-12-04 12:50:16,546 INFO   : End   iteration=32, removed=24, total=8034
+2025-12-04 12:50:16,546 INFO   : Begin iteration=33, total=8034
+2025-12-04 12:50:16,560 INFO   : End   iteration=33, removed=20, total=8054
+2025-12-04 12:50:16,560 INFO   : Begin iteration=34, total=8054
+2025-12-04 12:50:16,573 INFO   : End   iteration=34, removed=24, total=8078
+2025-12-04 12:50:16,573 INFO   : Begin iteration=35, total=8078
+2025-12-04 12:50:16,582 INFO   : End   iteration=35, removed=19, total=8097
+2025-12-04 12:50:16,582 INFO   : Begin iteration=36, total=8097
+2025-12-04 12:50:16,590 INFO   : End   iteration=36, removed=19, total=8116
+2025-12-04 12:50:16,590 INFO   : Begin iteration=37, total=8116
+2025-12-04 12:50:16,598 INFO   : End   iteration=37, removed=16, total=8132
+2025-12-04 12:50:16,598 INFO   : Begin iteration=38, total=8132
+2025-12-04 12:50:16,611 INFO   : End   iteration=38, removed=12, total=8144
+2025-12-04 12:50:16,611 INFO   : Begin iteration=39, total=8144
+2025-12-04 12:50:16,626 INFO   : End   iteration=39, removed=10, total=8154
+2025-12-04 12:50:16,626 INFO   : Begin iteration=40, total=8154
+2025-12-04 12:50:16,635 INFO   : End   iteration=40, removed=12, total=8166
+2025-12-04 12:50:16,635 INFO   : Begin iteration=41, total=8166
+2025-12-04 12:50:16,643 INFO   : End   iteration=41, removed=10, total=8176
+2025-12-04 12:50:16,643 INFO   : Begin iteration=42, total=8176
+2025-12-04 12:50:16,651 INFO   : End   iteration=42, removed=10, total=8186
+2025-12-04 12:50:16,651 INFO   : Begin iteration=43, total=8186
+2025-12-04 12:50:16,659 INFO   : End   iteration=43, removed=9, total=8195
+2025-12-04 12:50:16,659 INFO   : Begin iteration=44, total=8195
+2025-12-04 12:50:16,668 INFO   : End   iteration=44, removed=12, total=8207
+2025-12-04 12:50:16,668 INFO   : Begin iteration=45, total=8207
+2025-12-04 12:50:16,676 INFO   : End   iteration=45, removed=13, total=8220
+2025-12-04 12:50:16,676 INFO   : Begin iteration=46, total=8220
+2025-12-04 12:50:16,684 INFO   : End   iteration=46, removed=9, total=8229
+2025-12-04 12:50:16,684 INFO   : Begin iteration=47, total=8229
+2025-12-04 12:50:16,698 INFO   : End   iteration=47, removed=11, total=8240
+2025-12-04 12:50:16,698 INFO   : Begin iteration=48, total=8240
+2025-12-04 12:50:16,713 INFO   : End   iteration=48, removed=12, total=8252
+2025-12-04 12:50:16,713 INFO   : Begin iteration=49, total=8252
+2025-12-04 12:50:16,726 INFO   : End   iteration=49, removed=12, total=8264
+2025-12-04 12:50:16,726 INFO   : Begin iteration=50, total=8264
+2025-12-04 12:50:16,736 INFO   : End   iteration=50, removed=12, total=8276
+2025-12-04 12:50:16,736 INFO   : Begin iteration=51, total=8276
+2025-12-04 12:50:16,744 INFO   : End   iteration=51, removed=7, total=8283
+2025-12-04 12:50:16,744 INFO   : Begin iteration=52, total=8283
+2025-12-04 12:50:16,752 INFO   : End   iteration=52, removed=7, total=8290
+2025-12-04 12:50:16,752 INFO   : Begin iteration=53, total=8290
+2025-12-04 12:50:16,760 INFO   : End   iteration=53, removed=5, total=8295
+2025-12-04 12:50:16,760 INFO   : Begin iteration=54, total=8295
+2025-12-04 12:50:16,769 INFO   : End   iteration=54, removed=7, total=8302
+2025-12-04 12:50:16,770 INFO   : Begin iteration=55, total=8302
+2025-12-04 12:50:16,780 INFO   : End   iteration=55, removed=8, total=8310
+2025-12-04 12:50:16,780 INFO   : Begin iteration=56, total=8310
+2025-12-04 12:50:16,787 INFO   : End   iteration=56, removed=8, total=8318
+2025-12-04 12:50:16,787 INFO   : Begin iteration=57, total=8318
+2025-12-04 12:50:16,795 INFO   : End   iteration=57, removed=4, total=8322
+2025-12-04 12:50:16,795 INFO   : Begin iteration=58, total=8322
+2025-12-04 12:50:16,803 INFO   : End   iteration=58, removed=3, total=8325
+2025-12-04 12:50:16,803 INFO   : Begin iteration=59, total=8325
+2025-12-04 12:50:16,811 INFO   : End   iteration=59, removed=2, total=8327
+2025-12-04 12:50:16,811 INFO   : Begin iteration=60, total=8327
+2025-12-04 12:50:16,819 INFO   : End   iteration=60, removed=2, total=8329
+2025-12-04 12:50:16,819 INFO   : Begin iteration=61, total=8329
+2025-12-04 12:50:16,827 INFO   : End   iteration=61, removed=1, total=8330
+2025-12-04 12:50:16,827 INFO   : Begin iteration=62, total=8330
+2025-12-04 12:50:16,835 INFO   : End   iteration=62, removed=2, total=8332
+2025-12-04 12:50:16,835 INFO   : Begin iteration=63, total=8332
+2025-12-04 12:50:16,843 INFO   : End   iteration=63, removed=2, total=8334
+2025-12-04 12:50:16,843 INFO   : Begin iteration=64, total=8334
+2025-12-04 12:50:16,851 INFO   : End   iteration=64, removed=2, total=8336
+2025-12-04 12:50:16,851 INFO   : Begin iteration=65, total=8336
+2025-12-04 12:50:16,859 INFO   : End   iteration=65, removed=1, total=8337
+2025-12-04 12:50:16,859 INFO   : Begin iteration=66, total=8337
+2025-12-04 12:50:16,867 INFO   : End   iteration=66, removed=2, total=8339
+2025-12-04 12:50:16,867 INFO   : Begin iteration=67, total=8339
+2025-12-04 12:50:16,875 INFO   : End   iteration=67, removed=2, total=8341
+2025-12-04 12:50:16,875 INFO   : Begin iteration=68, total=8341
+2025-12-04 12:50:16,883 INFO   : End   iteration=68, removed=2, total=8343
+2025-12-04 12:50:16,883 INFO   : Begin iteration=69, total=8343
+2025-12-04 12:50:16,890 INFO   : End   iteration=69, removed=1, total=8344
+2025-12-04 12:50:16,890 INFO   : Begin iteration=70, total=8344
+2025-12-04 12:50:16,898 INFO   : End   iteration=70, removed=1, total=8345
+2025-12-04 12:50:16,898 INFO   : Begin iteration=71, total=8345
+2025-12-04 12:50:16,906 INFO   : End   iteration=71, removed=0, total=8345
+2025-12-04 12:50:16,906 INFO   : Final iteration=71, total=8345
+2025-12-04 12:50:16,906 INFO   : Completed successfully
+$
