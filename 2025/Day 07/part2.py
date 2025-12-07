@@ -3,8 +3,9 @@
 import argparse
 import logging
 import sys
+from functools import cache
 from io import TextIOWrapper
-from typing import List, Tuple
+from typing import List
 
 
 def parse_args() -> argparse.Namespace:
@@ -46,28 +47,25 @@ class Teleporter:
     def start_col(self) -> int:
         return self.grid[0].index(self.START)
 
-    def spawn_beam(self, row, col) -> List[Tuple[int, int]]:
-        splits: List[Tuple[int, int]] = []
+    @cache
+    def spawn_beam(self, row, col) -> int:
+        splits: int = 0
 
         while row < len(self.grid):
             cell: str = self.grid[row][col]
             if cell == self.START and row == 0:
                 row += 1
                 pass
-            elif cell == self.BEAM:
-                break
-            elif cell == self.EMPTY:
+            elif cell == self.BEAM or cell == self.EMPTY:
                 self.grid[row] = self.grid[row][0:col] + self.BEAM + self.grid[row][col+1:]
                 row += 1
                 pass
             elif cell == self.SPLITTER:
-                splits.append((row, col))
+                splits += 1
                 if col - 1 >= 0:
-                    for s in self.spawn_beam(row, col - 1):
-                        splits.append(s)
+                    splits += self.spawn_beam(row, col - 1)
                 if col + 1 < len(self.grid[0]):
-                    for s in self.spawn_beam(row, col + 1):
-                        splits.append(s)
+                    splits += self.spawn_beam(row, col + 1)
                 break
             else:
                 raise ValueError(f'Unknown {cell=} at {row=}, {col=}')
@@ -88,9 +86,10 @@ def main() -> int:
     teleporter.read_input(args.input_file[0])
     teleporter.dump(logging.DEBUG)
 
-    beam_splits: List[Tuple[int, int]] = teleporter.spawn_beam(0, teleporter.start_col())
+    total_splits: int = teleporter.spawn_beam(0, teleporter.start_col())
+    total_splits += 1  # for initial timeline
     teleporter.dump(logging.INFO)
-    logging.info(f'Final {len(beam_splits)=}')
+    logging.info(f'Final {total_splits=}')
 
     logging.info('Completed successfully')
     return 0
