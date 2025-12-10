@@ -1,0 +1,7 @@
+$ python ./part1.py --debug input.txt
+2025-12-09 00:02:36,965 INFO   : Starting ./part1.py to read input.txt...
+2025-12-09 00:02:36,965 DEBUG  : args=Namespace(debug=True, input_file=[<_io.TextIOWrapper name='input.txt' mode='r' encoding='cp1252'>])
+2025-12-09 00:02:36,966 INFO   : len(positions)=496, min_x=1544, max_x=98366, min_y=1667, max_y=98335
+2025-12-09 00:02:36,994 INFO   : largest_area=4776487744, largest_area_pos1=(83796, 85128), largest_area_pos2=(15029, 15671)
+2025-12-09 00:02:36,994 INFO   : Completed successfully
+$

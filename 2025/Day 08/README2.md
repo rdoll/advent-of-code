@@ -16,5 +16,5 @@ https://adventofcode.com/2025/day/8#part2
 ### My Solution
 
 * My input was [input.txt](input.txt)
-* I wrote [part2.py](part2-all-df.py)
+* I wrote [part2.py](part2.py)
 * My [part2-output.txt](part2-output.txt) was correct
