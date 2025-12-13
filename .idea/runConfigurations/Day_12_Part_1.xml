@@ -1,5 +1,5 @@
 <component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="Day 11 Part 2" type="PythonConfigurationType" factoryName="Python" focusToolWindowBeforeRun="true">
+  <configuration default="false" name="Day 12 Part 1" type="PythonConfigurationType" factoryName="Python" focusToolWindowBeforeRun="true">
     <module name="advent-of-code" />
     <option name="ENV_FILES" value="" />
     <option name="INTERPRETER_OPTIONS" value="" />
@@ -14,8 +14,8 @@
     <option name="ADD_CONTENT_ROOTS" value="true" />
     <option name="ADD_SOURCE_ROOTS" value="true" />
     <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-    <option name="SCRIPT_NAME" value="$PROJECT_DIR$/2025/Day 11/part2.py" />
-    <option name="PARAMETERS" value="--debug sample2a.txt" />
+    <option name="SCRIPT_NAME" value="$PROJECT_DIR$/2025/Day 12/part1.py" />
+    <option name="PARAMETERS" value="--debug sample1a.txt" />
     <option name="SHOW_COMMAND_LINE" value="false" />
     <option name="EMULATE_TERMINAL" value="false" />
     <option name="MODULE_MODE" value="false" />
