@@ -31,6 +31,7 @@ class Worker:
     paths_checked: int
     found: int
     max_depth: int
+    num_events: int
 
     def __init__(self,
                  work_queue: mp.JoinableQueue,
@@ -42,10 +43,12 @@ class Worker:
         self.paths_checked = 0
         self.found = 0
         self.max_depth = 0
+        self.num_events = 0
 
     def __repr__(self):
         return (f'Worker(results.value={self.results.value}, #devices={len(self.devices)}'
-            + f', paths_checked={self.paths_checked}, found={self.found}, max_depth={self.max_depth})')
+            f', paths_checked={self.paths_checked}, found={self.found}, max_depth={self.max_depth}'
+            f', num_events={self.num_events})')
 
     def trace_path(self, path: str, depth: int) -> int:
         if depth > self.max_depth:
@@ -53,7 +56,7 @@ class Worker:
 
         self.paths_checked += 1
         if self.paths_checked % 500_000 == 0:
-            mp.get_logger().info(f'{self.paths_checked=:,}, {self.max_depth=}')
+            mp.get_logger().info(f'{self.paths_checked=:,}, {self.max_depth=}, {self.num_events=}')
 
         device: str = path[-3:]
         if device == 'out':
@@ -66,7 +69,7 @@ class Worker:
         for connection in self.devices[device]:
             if not connection in path:
                 next_path: str = f'{path} {connection}'
-                if depth % 5 == 0:
+                if depth > 10 and depth % 5 == 0:
                     self.work_queue.put(next_path)
                 else:
                     found += self.trace_path(next_path, depth + 1)
@@ -79,6 +82,7 @@ class Worker:
             while True:
                 path: str = self.work_queue.get(block=True, timeout=0.5)
                 self.work_queue.task_done()
+                self.num_events += 1
                 depth: int =  ((len(path) - 3) // 4) + 1
                 # mp.get_logger().info(f'Dequeued {path=}, {depth=}')
                 found: int = self.trace_path(path, depth)
