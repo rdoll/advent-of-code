@@ -5,7 +5,9 @@ import copy
 import logging
 import re
 import sys
-from typing import List, Tuple, Set
+from typing import List, Tuple
+
+import shapely as sly
 
 
 def parse_args() -> argparse.Namespace:
@@ -31,39 +33,39 @@ class Shape:
         (2, 0, 0, 0), (2, 1, 1, 0), (2, 2, 2, 0)
     ]
     index: int = 0
-    rotations: List[Set[Tuple[int, int]]]
+    multipoints: List[sly.MultiPoint]
 
     def __init__(self, index: int, rows: List[str]) -> None:
         self.index = index
-        self.rotations = [Shape.to_rotation(rows)]
+        self.multipoints = [Shape.to_multipoint(rows)]
         for r in range(1, 4):
-            self.rotations.append(Shape.rotate_90_clockwise(self.rotations[r - 1]))
+            self.multipoints.append(Shape.rotate_90_clockwise(self.multipoints[r - 1]))
 
     def __repr__(self) -> str:
-        return f'Shape({self.index}, {self.rotations})'
+        return f'Shape({self.index}, {self.multipoints})'
 
     def __str__(self) -> str:
-        return f'{self.index}=' + '\n'.join([str(rot) for rot in self.rotations])
+        return f'{self.index}=' + '\n'.join([str(mp) for mp in self.multipoints])
 
     @staticmethod
-    def to_rotation(rows: List[str]) -> Set[Tuple[int, int]]:
-        rotation: Set[Tuple[int, int]] = set()
+    def to_multipoint(rows: List[str]) -> sly.MultiPoint:
+        points: List[sly.Point] = []
         assert len(rows) == Shape.HEIGHT
         for row in range(Shape.HEIGHT):
             assert len(rows[row]) == Shape.WIDTH
             for col in range(Shape.WIDTH):
                 if rows[row][col] == Shape.FILLED:
-                    rotation.add((row, col))
-        return rotation
+                    points.append(sly.Point(row, col))
+        return sly.multipoints(points)
 
     @staticmethod
-    def rotate_90_clockwise(unrotated: Set[Tuple[int, int]]) -> Set[Tuple[int, int]]:
-        rotated: Set[Tuple[int, int]] = set()
+    def rotate_90_clockwise(multipoint: sly.MultiPoint) -> sly.MultiPoint:
+        rotated_points: List[sly.Point] = []
         for rot_map in Shape.ROTATE_90_CLOCKWISE:
             (current_row, current_col, maps_to_row, maps_to_col) = rot_map
-            if (current_row, current_col) in unrotated:
-                rotated.add((maps_to_row, maps_to_col))
-        return rotated
+            if multipoint.contains(sly.Point(current_row, current_col)):
+                rotated_points.append(sly.Point(maps_to_row, maps_to_col))
+        return sly.multipoints(rotated_points)
 
 
 class Region:
@@ -80,25 +82,23 @@ class Region:
         return f'Region({self.width}x{self.height}, {self.shape_counts})'
 
 
-total_shapes_placed: int = 0
-
 class Grid:
     region: Region
     shapes: List[Shape]
-    grid: Set[Tuple[int, int]]
+    grid: sly.MultiPoint
     shape_counts: List[int]
 
     def __init__(self,
                  region: Region,
                  shapes: List[Shape],
-                 grid: Set[Tuple[int, int]] = None,
+                 grid: sly.MultiPoint = None,
                  shape_counts: List[int] | None = None) -> None:
         self.region = region
         self.shapes = shapes
         if grid is None:
-            self.grid = set()
+            self.grid = sly.MultiPoint()
         else:
-            self.grid = set(grid)
+            self.grid = sly.MultiPoint(grid)
         if shape_counts is None:
             self.shape_counts = [0] * len(shapes)
         else:
@@ -107,27 +107,19 @@ class Grid:
     def __copy__(self) -> 'Grid':
         return type(self)(self.region, self.shapes, self.grid, self.shape_counts)
 
-    def place_shape_at(self, row: int, col: int, index: int, rotation: Set[Tuple[int, int]]) -> bool:
-        offset_rotation: Set[Tuple[int, int]] = set([(row + p[0], col + p[1]) for p in rotation])
-        no_overlap_size: int = len(self.grid) + len(rotation)
-        self.grid |= offset_rotation
-        if len(self.grid) != no_overlap_size:
+    def place_shape_at(self, row: int, col: int, index: int, rotation: sly.MultiPoint) -> bool:
+        offset_rotation: sly.MultiPoint = sly.MultiPoint([sly.Point(row + p.x, col + p.y) for p in rotation.geoms])
+        if self.grid.intersects(offset_rotation):
             return False
-
+        self.grid = self.grid.union(offset_rotation)
         self.shape_counts[index] += 1
         assert self.shape_counts[index] <= self.region.shape_counts[index]
         if self.shape_counts == self.region.shape_counts:
             logging.info(f'All shapes matched! {self.shape_counts=}, {self.grid=}')
             return True
-
-        global total_shapes_placed
-        total_shapes_placed += 1
-        if total_shapes_placed % 5_000 == 0:
-            logging.debug(f'{total_shapes_placed=:,}')
-
         return self.place_shapes()
 
-    def place_shape(self, index: int, rotation: Set[Tuple[int, int]]) -> bool:
+    def place_shape(self, index: int, rotation: sly.MultiPoint) -> bool:
         for row in range(0, self.region.height - Shape.HEIGHT + 1):
             for col in range(0, self.region.width - Shape.WIDTH + 1):
                 grid: Grid = copy.copy(self)
@@ -139,7 +131,7 @@ class Grid:
         for index in range(len(self.shapes)):
             if self.shape_counts[index] + 1 <= self.region.shape_counts[index]:
                 for rot in range(0, 4):
-                    if self.place_shape(index, self.shapes[index].rotations[rot]):
+                    if self.place_shape(index, self.shapes[index].multipoints[rot]):
                         return True
         return False
 
